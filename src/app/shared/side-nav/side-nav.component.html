@@ -1,0 +1,69 @@
+    <mat-nav-list>
+        <div class="header-drawer">
+          <div></div>
+          <div class="login-row" fxLayout="row" fxLayoutAlign="space-between center" >
+            <button class="transparent-button" mat-raised-button (click)="goLoginScreen()">
+                <mat-icon svgIcon="login"></mat-icon>
+                Đăng nhập
+            </button>
+            <button class="transparent-button" mat-raised-button>
+                <mat-icon svgIcon="register"></mat-icon>
+                Đăng ký
+            </button>
+          </div>
+        </div>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="sell1">Nhà đất bán<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #sell1="matMenu">
+            <button mat-menu-item>Bán căn hộ chung cư</button>
+            <button mat-menu-item>Bán nhà riêng</button>
+            <button mat-menu-item>Bán nhà biệt thự, liền kề</button>
+            <button mat-menu-item>Bán nhà mặt phố</button>
+            <button mat-menu-item>Bán đất nền dự án</button>
+            <button mat-menu-item>Bán đất</button>
+            <button mat-menu-item>Bán trang trại, khu nghỉ dưỡng</button>
+            <button mat-menu-item>Bán kho, nhà xưởng</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="rent1">Nhà đất cho thuê<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #rent1="matMenu">
+            <button mat-menu-item>Cho thuê căn hộ chung cư</button>
+            <button mat-menu-item>Cho thuê nhà riêng</button>
+            <button mat-menu-item>Cho thuê nhà biệt thự, liền kề</button>
+            <button mat-menu-item>Cho thuê nhà mặt phố</button>
+            <button mat-menu-item>Cho thuê đất nền dự án</button>
+            <button mat-menu-item>Cho thuê đất</button>
+            <button mat-menu-item>Cho thuê trang trại, khu nghỉ dưỡng</button>
+            <button mat-menu-item>Cho thuê kho, nhà xưởng</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="project1">Dự án<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #project1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="find1">Cần mua - cần thuê<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #find1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="news1">Tin tức<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #news1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="build1">Xây dựng - kiến trúc<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #build1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="interior1">Nội - ngoại thất<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #interior1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <button mat-menu-item  class="icon-sidenav" [matMenuTriggerFor]="qa1">Hỏi đáp<mat-icon>expand_more</mat-icon></button>
+        <mat-menu #qa1="matMenu">
+            <button mat-menu-item>###########</button>
+        </mat-menu>
+        <div class="contact-row" fxLayout="row" fxLayoutAlign="space-around center" >
+          <mat-icon svgIcon="facebook"></mat-icon>
+          <mat-icon svgIcon="twitter"></mat-icon>
+          <mat-icon svgIcon="google"></mat-icon>
+          <mat-icon svgIcon="youtube"></mat-icon>
+        </div>
+
+    </mat-nav-list>
+    

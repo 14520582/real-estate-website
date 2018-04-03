@@ -1,0 +1,20 @@
+<div class="parent-container" fxLayout="row">
+  <div class="side-left" fxFlex="62">
+    <header fxLayout="row" fxLayoutAlign="space-between center" >
+      <div>{{date}}</div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+          <mat-icon [ngStyle]="{'color':'rgba(21,101,192 ,1)'}" svgIcon="facebook"></mat-icon>
+          <mat-icon [ngStyle]="{'color': 'rgba(3,155,229 ,1)'}"  svgIcon="twitter"></mat-icon>
+          <mat-icon [ngStyle]="{'color':'rgba(229,57,53 ,1)'}"  svgIcon="google"></mat-icon>
+      </div>
+    </header>
+    <h4>{{item.name}}</h4>
+    <div class="brief-detail">
+      <span class="title-category">Khu vực</span> {{item.area}}
+    </div>
+  </div>
+  <div class="side-right" fxFlex>
+
+  </div>
+</div>
+

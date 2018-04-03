@@ -1,0 +1,13 @@
+<mat-card class="real-estate-card">
+  <a routerLink="/detail-real-estate/{{item.id}}">
+    <img mat-card-image class="cover" src={{item.cover}} alt="Photo of {{item.name}}">
+  </a>
+  <a routerLink="/detail-real-estate/{{item.id}}">
+    <mat-card-title class = "title">{{item.name}}</mat-card-title>
+  </a>
+  <mat-card-title>{{item.price}}</mat-card-title>
+  <div class="sub-detail-container">
+    <mat-card-subtitle>{{item.area}}</mat-card-subtitle>
+    <mat-card-subtitle>{{item.location}}</mat-card-subtitle>
+  </div>
+</mat-card>

@@ -1,0 +1,30 @@
+.close-button {
+    mat-icon{
+        color: gray
+    }
+}
+@media (max-width: 599px) {
+    .close-button {
+        display: none
+    }
+}
+// @media (min-width: 600px) {
+//     .login-screen {
+//         width: 400px;
+//         height: 400px;
+//     }
+// }
+.row-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+

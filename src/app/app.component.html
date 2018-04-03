@@ -1,0 +1,7 @@
+<mat-sidenav-container autosize>
+    <app-main-nav (onMenuClick)="snav.toggle()"></app-main-nav>
+    <mat-sidenav #snav [fixedInViewport]="true">
+        <app-side-nav (onMenuClick)="snav.toggle()"></app-side-nav>
+    </mat-sidenav>
+    <app-main></app-main>
+</mat-sidenav-container>

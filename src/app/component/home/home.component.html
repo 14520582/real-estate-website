@@ -1,0 +1,10 @@
+<div class="filter-container">
+    <app-tab-filter></app-tab-filter>
+</div>
+<div class="main"
+    fxLayout="row wrap" 
+    fxLayout.xs="column"> 
+    <div *ngFor="let item of realEstateData" fxFlex="25%">
+        <app-real-estate-card [item] = "item"></app-real-estate-card>    
+    </div>
+</div>
