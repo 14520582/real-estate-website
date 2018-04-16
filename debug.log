@@ -9,3 +9,7 @@
 [0328/133721.269:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [0329/100433.992:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [0403/084503.442:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0415/190324.746:ERROR:process_info.cc(359)] UncheckedAllocate
+[0415/190324.822:ERROR:process_info.cc(359)] UncheckedAllocate
+[0415/191525.255:ERROR:process_info.cc(359)] UncheckedAllocate
+[0415/194828.760:ERROR:process_info.cc(359)] UncheckedAllocate

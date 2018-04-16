@@ -6,17 +6,26 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import {CdkTableModule} from '@angular/cdk/table';
+import { RouterModule, Routes } from '@angular/router';
 import { TabFilterComponent } from './tab-filter/tab-filter.component';
-
+import { NavComponent } from './nav/nav.component';
+import { ScrollHeaderDirective } from './directives/scroll-header.directive';
+import { CarouselComponent } from './carousel/carousel.component';
+import { RealEstateCardComponent } from './real-estate-card/real-estate-card.component';
 @NgModule({
   declarations: [
     SideNavComponent,
     MainNavComponent,
-    TabFilterComponent
+    TabFilterComponent,
+    NavComponent,
+    ScrollHeaderDirective,
+    RealEstateCardComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
@@ -31,7 +40,10 @@ import { TabFilterComponent } from './tab-filter/tab-filter.component';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    CdkTableModule
+    CdkTableModule,
+    CarouselComponent,
+    RealEstateCardComponent,
+    NavComponent
   ]
 })
 export class SharedModule { }

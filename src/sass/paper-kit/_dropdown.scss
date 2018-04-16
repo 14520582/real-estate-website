@@ -31,7 +31,7 @@
         }
 
         .dropdown-item{
-            color: $font-color;
+            color: $font-color !important;
             font-size: $font-size-base;
             padding: 10px 45px 10px 15px;
             clear: both;
@@ -39,7 +39,7 @@
             width: 100%;
             display: block;
             &:hover{
-                color: $white-color;
+                color: $white-color !important;
             }
 
            img{
@@ -67,7 +67,7 @@
             border-bottom-right-radius: $border-radius-extreme;
         }
 
-        .select & .dropdown-item:first-child a{
+        .select & .dropdown-item:first-child{
             border-radius: 0;
             border-bottom: 0 none;
         }
@@ -114,13 +114,7 @@
         visibility: visible;
     }
 }
-.navbar-nav.mr-auto .dropdown-menu:before,
-.navbar-nav.mr-auto .dropdown-menu:after,
-.navbar-nav.ml-auto .dropdown-menu:before,
-.navbar-nav.ml-auto .dropdown-menu:after{
-    left: 12px !important;
-    right: auto;
-}
+
 //fix bug for the select items in btn-group
 .btn-group.select{
     // overflow: hidden;
@@ -130,8 +124,7 @@
 }
 .dropdown-menu-right{
     right: -2px;
-    left: auto!important;
-
+    left: auto;
 }
 
 //  the style for opening dropdowns on mobile devices; for the desktop version check the _responsive.scss file
@@ -156,7 +149,7 @@
     .navbar-nav .dropdown-item.show .dropdown-menu,
     .dropdown.show .dropdown-menu,
     .dropdown-btn.show .dropdown-menu{
-        transform: translate3d(0px, 15px, 0px);
+        transform: translate3d(0px, 0px, 0px);
         visibility: visible !important;
     }
     .bootstrap-select .dropdown-menu{
@@ -199,7 +192,7 @@
         transform: translate3d(0px, 0px, 0px);
     }
 
-    .navbar-nav li .dropdown-menu:before,
+    .navbar-nav .dropdown-menu:before,
     #dropdown-row .dropdown .dropdown-menu:before,
     .card.card-just-text .dropdown .dropdown-menu:before,
     .card-just-text .dropdown .dropdown-menu:before,
@@ -210,14 +203,15 @@
         content: "";
         display: inline-block;
         position: absolute;
-        left: 12px;
+        right: 12px;
         top: -11px;
     }
-    .dropdown .dropdown-menu-right.dropdown-menu:before{
-        right: 12px;
-        left: auto;
+
+    #dropdown-row .dropdown .dropdown-menu:before{
+        left: 12px !important;
+        right: auto;
     }
-    .navbar-nav li .dropdown-menu:after,
+    .navbar-nav .dropdown-menu:after,
     #dropdown-row .dropdown .dropdown-menu:after,
     .card.card-just-text .dropdown .dropdown-menu:after,
     .card-just-text .dropdown .dropdown-menu:after,
@@ -228,12 +222,12 @@
         content: "";
         display: inline-block;
         position: absolute;
-        left: 12px;
+        right: 12px;
         top: -10px;
     }
-     .dropdown .dropdown-menu-right.dropdown-menu:after{
-        right: 12px;
-        left: auto;
+    #dropdown-row .dropdown .dropdown-menu:after{
+        left: 12px !important;
+        right: auto;
     }
     #dropdown-row .dropdown .dropdown-menu{
         left: 15px;
@@ -287,7 +281,7 @@
         .social-line,
         a,
         .action-line{
-            background-color: $pale-bg;
+            background-color: $white-color;
             color: $font-color;
             opacity: 1;
             text-decoration: none;
@@ -350,7 +344,7 @@
     bottom: -12px;
 }
 .dropup .dropdown-menu:after{
-    border-top: 11px solid #FFFCF5;
+    border-top: 11px solid #FFF;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
@@ -443,4 +437,9 @@
             }
         }
     }
+}
+.navbar-nav.mr-auto .dropdown-menu:before,
+.navbar-nav.mr-auto .dropdown-menu:after{
+    left: 12px !important;
+    right: auto;
 }

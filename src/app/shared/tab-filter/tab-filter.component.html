@@ -1,12 +1,17 @@
-<mat-tab-group>
-  <mat-tab label="Nhà đất bán">
-    <div>
-      1
-    </div>
-  </mat-tab>
-  <mat-tab label="Nhà đất cho thuê">
-    <div>
-      2
-    </div>
-  </mat-tab>
-</mat-tab-group>
+<div class="search-view">
+  <h1>{{slogan.get(btnSelected)}}</h1>
+  <div class="btn-group btn-group-lg">
+    <button class="btn btn-transparent" (click)="changeOption('buy')" [ngClass]="{active: isActive('buy')}">Buy</button>
+    <button class="btn btn-transparent" (click)="changeOption('rent')" [ngClass]="{active: isActive('rent')}">Rent</button>
+    <button class="btn btn-transparent" (click)="changeOption('sell')" [ngClass]="{active: isActive('sell')}">Sell</button>
+  </div>
+  <div class="search-bar">
+    <mat-icon>location_on</mat-icon>
+    <mat-form-field>
+        <mat-select placeholder="Choose your location">
+          <mat-option *ngFor="let location of locations" [value]="location">{{location}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+

@@ -1,10 +1,8 @@
-.carousel-control-prev,
-.carousel-control-next{
+.carousel-control{
     background-color: $danger-color;
     border-radius: 50%;
     opacity: 1;
     text-shadow: none;
-    font-size: 12px;
 
     &:hover,
     &:focus{
@@ -12,38 +10,15 @@
         background-color: $danger-states-color;
     }
 }
-.carousel-control-prev-icon{
-    background-image: none !important;
-    margin-top: -5px;
-    &:before{
-        color: $white-color;
-        font-size: 26px;
-        margin: 2px;
-        padding-right: 3px;
-        font: normal normal normal 23px/1 FontAwesome !important;
-        content: "\f104" !important;
-    }
-}
-.carousel-control-next-icon{
-    background-image: none !important;
-    margin-top: -5px;
-    &:before{
-        color: $white-color;
-        font-size: 26px;
-        margin: 2px;
-        padding-left: 2px;
-        font: normal normal normal 23px/1 FontAwesome !important;
-        content: "\f105" !important;
-    }
-}
-.carousel-control-prev{
+
+.carousel-control.left{
     height: 30px;
     top: 48%;
     width: 30px;
     left: 20px;
     opacity: 0;
 }
-.carousel-control-next{
+.carousel-control.right{
     height: 30px;
     right: 20px;
     top: 48%;
@@ -64,7 +39,7 @@
     margin: 2px;
     padding-left: 3px;
 }
-.carousel-control-prev, .carousel-control-next {
+.carousel-control.left, .carousel-control.right {
     background-image: none;
 }
 
@@ -95,16 +70,8 @@
     background-color: $danger-color;
 }
 .page-carousel:hover{
-    .carousel-control-prev,
-    .carousel-control-next{
+    .carousel-control.right,
+    .carousel-control.left{
         opacity: 1;
-        @include transition(300ms, linear);
-
     }
-}
-ngb-carousel{
-    &:focus{
-        outline: none !important;
-    }
-
 }

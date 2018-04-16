@@ -2,7 +2,7 @@
     margin-bottom: 0;
 }
 .page-header{
-    background-color: #B2AFAB;
+    background-color: rgb(255, 255, 255);
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
@@ -11,19 +11,12 @@
     position: relative;
     width: 100%;
     z-index: 1;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    /* Center vertically */
     align-items: center;
-    /*Center horizontaly */
     justify-content: center;
 
-    /*Center horizontaly ie */
-    -ms-flex-pack: center;
-
     .filter::after{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
         content: "";
         display: block;
         height: 100%;
@@ -33,7 +26,6 @@
         width: 100%;
         z-index: 1;
     }
-
     &.page-header-small{
         min-height: 65vh !important;
         max-height: 700px;
@@ -105,7 +97,6 @@
     width: 100%;
     background: transparent;
     color: $white-color;
-    left: 0;
 }
 .register-footer .fa-heart{
     color: #EB5E28;
@@ -147,6 +138,7 @@
 #following h3{
     margin: 20px 0 40px 0;
 }
+
 #follows .follows .unfollow .checkbox{
     margin-top: -15px;
 }
@@ -185,11 +177,10 @@
     font-weight: 700;
     margin: 0;
     color: #FFFFFF;
-    // background: #fbf8ec;
-    background: -moz-linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
-    background: -webkit-linear-gradient(to bottom, #FFFFFF 35%,#4e6773 100%);
-    background: -ms-linear-gradient(to bottom, #FFFFFF 35%,#4e6773 100%);
-    background: -o-linear-gradient(to bottom, #FFFFFF 35%,#4e6773 100%);
+    background: #fbf8ec;
+    background: -moz-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
+    background: -webkit-linear-gradient(top, #FFFFFF 35%,#4e6773 100%);
+    background: -ms-linear-gradient(top, #FFFFFF 35%,#4e6773 100%);
     background: linear-gradient(to bottom, #FFFFFF 35%,#4e6773 100%);
 
     -webkit-background-clip: text;
@@ -235,17 +226,9 @@
         opacity: 1;
     }
 }
-.angular-logo{
-    max-width: 90px;
-    margin: -50px auto 45px;
-
-    img{
-        width: 100%;
-    }
-}
 .page-header{
     .content-center{
-        //margin-top: 85px;
+        margin-top: 85px;
     }
 }
 .moving-clouds{
@@ -266,27 +249,5 @@
 .following{
     img{
         max-width: 70px;
-    }
-}
-
-.ie-background{
-    .page-header{
-        .content-center{
-            top: 50%;
-            left: 50%;
-            position: absolute;
-            -ms-transform: translate(-50%, -75%);
-            .title-brand{
-                .presentation-title{
-                    background: none;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 500px){
-    .presentation-title{
-        font-size: 5em;
     }
 }

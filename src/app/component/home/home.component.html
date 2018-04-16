@@ -1,10 +1,10 @@
-<div class="filter-container">
-    <app-tab-filter></app-tab-filter>
-</div>
-<div class="main"
-    fxLayout="row wrap" 
-    fxLayout.xs="column"> 
-    <div *ngFor="let item of realEstateData" fxFlex="25%">
-        <app-real-estate-card [item] = "item"></app-real-estate-card>    
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/garden.jpg')">
+        <app-tab-filter></app-tab-filter>
     </div>
+    <app-carousel [category]="'New Listings'"></app-carousel>
+    <app-carousel [category]="'Downtown'"></app-carousel>
+    <app-carousel [category]="'Suburb'"></app-carousel>
+    <app-carousel [category]="'Safe Neighborhoods'"></app-carousel>
+    <app-carousel [category]="'Fixer Upper Homes'"></app-carousel>
 </div>
