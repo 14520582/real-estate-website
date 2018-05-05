@@ -12,6 +12,7 @@ import { NavComponent } from './nav/nav.component';
 import { ScrollHeaderDirective } from './directives/scroll-header.directive';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RealEstateCardComponent } from './real-estate-card/real-estate-card.component';
+import { MainFilterComponent } from './main-filter/main-filter.component';
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -20,7 +21,8 @@ import { RealEstateCardComponent } from './real-estate-card/real-estate-card.com
     NavComponent,
     ScrollHeaderDirective,
     RealEstateCardComponent,
-    CarouselComponent
+    CarouselComponent,
+    MainFilterComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { RealEstateCardComponent } from './real-estate-card/real-estate-card.com
     CdkTableModule,
     CarouselComponent,
     RealEstateCardComponent,
-    NavComponent
+    NavComponent,
+    MainFilterComponent
   ]
 })
 export class SharedModule { }

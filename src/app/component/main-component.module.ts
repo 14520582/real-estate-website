@@ -9,13 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailItemComponent } from './detail-item/detail-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthenticateService } from '../service/authenticate.service';
+import { SectionComponent } from './section/section.component';
 @NgModule({
   declarations: [
       HomeComponent, 
       LoginComponent,
       LayoutComponent,
       DetailItemComponent,
-      FooterComponent
+      FooterComponent,
+      SectionComponent
   ],
   imports: [
     CommonModule,

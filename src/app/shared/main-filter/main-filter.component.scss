@@ -1,0 +1,53 @@
+.option-panel {
+    position: absolute;
+    top: -17px;
+}
+::ng-deep .mat-form-field-underline{
+    background-color: transparent;
+}
+::ng-deep .mat-form-field-ripple{
+    background-color: transparent;
+}
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0.5em;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+::ng-deep .mat-form-field-infix {
+    width: 130px !important;
+    padding: 0em;
+}
+.selection-bar {
+    border: 1px solid rgb(139, 137, 137);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    mat-icon {
+        font-size: 25px;
+        color: rgb(101, 102, 101);
+    }
+}
+.choose-number-panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div {
+        font-family: Roboto,"Helvetica Neue",sans-serif;
+        font-weight: 500
+    }
+}
+.expand{
+    margin-left: 16px;
+}
+.radio-group {
+    margin-left: 6px;
+    margin-top: 7px;
+    mat-radio-button {
+        margin-right: 4px
+    }
+}

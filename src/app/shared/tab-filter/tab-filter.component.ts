@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab-filter',
@@ -11,24 +12,41 @@ export class TabFilterComponent implements OnInit {
     ["rent","Find your next rental"],
     ["sell","Sell your home"]
   ]);
-  btnSelected: string = "buy"
+  typeSelected: string = "buy"
+  areaSelected: string = ''
   locations = [
-    'Quận 1', 'Quận 2', 'Quận 3', 'Quận 5', 'Quận 7', 'Quận 8', 'Quận 9', 'Quận 10',
-    'Quận 1', 'Quận 12', 'Bình Thạnh', 'Thủ Đức', 'Gò Vấp', 'Bình Tân', 'Tân Bình', 'Củ Chỉ', 'Hóc Môn',
-    'Tân Phú', 'Phú Nhuận'];
-  constructor() { }
+    { label: 'Quận 1', value: 'quan-1'}, 
+    { label: 'Quận 2', value: 'quan-2'}, 
+    { label: 'Quận 3', value: 'quan-3'},
+    { label: 'Quận 4', value: 'quan-4'}, 
+    { label: 'Quận 5', value: 'quan-5'},
+    { label: 'Bình Thạnh', value: 'binh-thanh'},
+    { label: 'Hóc Môn', value: 'hoc-mon'},
+    { label: 'Củ Chỉ', value: 'cu-chi'},
+    { label: 'Bình Tân', value: 'binh-tan'},
+    { label: 'Gò Vấp', value: 'go-vap'},
+    { label: 'Thủ Đức', value: 'thu-duc'}
+  ];
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
   changeOption(type: string){
-    this.btnSelected = type
+    this.typeSelected = type
   }
 
   isActive(type: string) {
-    if(type == this.btnSelected)
+    if(type == this.typeSelected)
       return true
     else
       return false
+  }
+
+  toSection(){
+    if(this.areaSelected && this.areaSelected != '')
+      this.router.navigate(['/property/', this.typeSelected, this.areaSelected]);
   }
 }
