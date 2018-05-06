@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,12 +8,16 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
 
   ngOnInit() {
   }
 
-
+  navigateToNewsList(category) {
+    this.router.navigate(['/news-list/', category]);
+  }
 
 }

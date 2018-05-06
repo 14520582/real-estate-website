@@ -11,22 +11,30 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Buy</a>
+        <a class="nav-link" href="#">Mua</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Rent</a>
+        <a class="nav-link" routerLink="/news">Thuê</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sell</a>
-    </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
+          <a class="nav-link" #menuTriggerNews="matMenuTrigger" (mouseenter)="menuTriggerNews.openMenu()" [matMenuTriggerFor]="news">Tin tức</a>
+          <mat-menu #news="matMenu">
+            <span (mouseleave)="menuTriggerNews.closeMenu()">
+                <button mat-menu-item (click)="navigateToNewsList('market')">Tin thị trường</button>
+                <button mat-menu-item (click)="navigateToNewsList('analysis')">Phân tích - nhận định</button>
+                <button mat-menu-item (click)="navigateToNewsList('policy')">Chính sách - Quản lý</button>
+                <button mat-menu-item (click)="navigateToNewsList('plan')">Thông tin quy hoạch</button>
+                <button mat-menu-item (click)="navigateToNewsList('worldwide')">Bất động sản thế giới</button>
+                <button mat-menu-item (click)="navigateToNewsList('constant')">Tư vất luật</button>
+                <button mat-menu-item (click)="navigateToNewsList('advice')">Lời khuyên</button>
+            </span>
+          </mat-menu>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">More</a>
+        <a class="nav-link" href="#">Về chúng tôi</a>
     </li>
     </ul>
-    <button mat-raised-button class="btn btn-post">Post</button>
+    <button mat-raised-button class="btn btn-post">Đăng tin</button>
   </div>
 </nav>
 

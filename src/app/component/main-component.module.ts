@@ -10,6 +10,8 @@ import { DetailItemComponent } from './detail-item/detail-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthenticateService } from '../service/authenticate.service';
 import { SectionComponent } from './section/section.component';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { NewsListPageComponent } from './news-list-page/news-list-page.component';
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -17,7 +19,9 @@ import { SectionComponent } from './section/section.component';
       LayoutComponent,
       DetailItemComponent,
       FooterComponent,
-      SectionComponent
+      SectionComponent,
+      NewsPageComponent,
+      NewsListPageComponent
   ],
   imports: [
     CommonModule,

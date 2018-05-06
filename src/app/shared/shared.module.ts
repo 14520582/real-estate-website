@@ -13,6 +13,7 @@ import { ScrollHeaderDirective } from './directives/scroll-header.directive';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RealEstateCardComponent } from './real-estate-card/real-estate-card.component';
 import { MainFilterComponent } from './main-filter/main-filter.component';
+import { NewsCardComponent } from './news-card/news-card.component';
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -22,7 +23,8 @@ import { MainFilterComponent } from './main-filter/main-filter.component';
     ScrollHeaderDirective,
     RealEstateCardComponent,
     CarouselComponent,
-    MainFilterComponent
+    MainFilterComponent,
+    NewsCardComponent
   ],
   imports: [
     CommonModule,
