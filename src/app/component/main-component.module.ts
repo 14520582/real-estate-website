@@ -12,6 +12,7 @@ import { AuthenticateService } from '../service/authenticate.service';
 import { SectionComponent } from './section/section.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { NewsListPageComponent } from './news-list-page/news-list-page.component';
+import { NewsService } from '../service/news.service';
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -35,6 +36,6 @@ import { NewsListPageComponent } from './news-list-page/news-list-page.component
     DetailItemComponent,
     FooterComponent
   ],
-  providers: [RealEstateService, AuthenticateService],
+  providers: [RealEstateService, AuthenticateService, NewsService],
 })
 export class MainModule { }

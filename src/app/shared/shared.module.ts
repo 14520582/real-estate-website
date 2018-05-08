@@ -14,6 +14,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { RealEstateCardComponent } from './real-estate-card/real-estate-card.component';
 import { MainFilterComponent } from './main-filter/main-filter.component';
 import { NewsCardComponent } from './news-card/news-card.component';
+import { DateCreatedPipe } from './pipes/date-created.pipe';
+import { ListCardComponent } from './list-card/list-card.component';
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -24,7 +26,9 @@ import { NewsCardComponent } from './news-card/news-card.component';
     RealEstateCardComponent,
     CarouselComponent,
     MainFilterComponent,
-    NewsCardComponent
+    NewsCardComponent,
+    DateCreatedPipe,
+    ListCardComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +52,9 @@ import { NewsCardComponent } from './news-card/news-card.component';
     CarouselComponent,
     RealEstateCardComponent,
     NavComponent,
-    MainFilterComponent
+    NewsCardComponent,
+    MainFilterComponent,
+    ListCardComponent
   ]
 })
 export class SharedModule { }

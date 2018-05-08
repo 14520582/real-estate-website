@@ -1,4 +1,4 @@
-import { IAlbum, IRealEstate, IBook } from "../interfaces/IEntity";
+import { IAlbum, IRealEstate, IBook, INews } from "../interfaces/IEntity";
 
 export class Data {
     public static ALL_ALBUMS : IAlbum[] = [
@@ -272,6 +272,69 @@ export class Data {
             "releasedate": 15444444411,
             "description": "d1",
             "type": "b"
+        }
+    ]
+    public static NEWS : INews[] = [
+        {
+            "id": 1,
+            "title": "Các đối tượng tung tin ảo gây 'sốt đất' tại Tp.HCM sẽ bị xử lý",
+            "datecreated": 1525610542,
+            "headline": "Sở Xây dựng Tp.HCM sẽ đề nghị cơ quan chức năng, chính quyền địa phương xử lý các đối tượng tung tin sai lệch khiến giá đất tại vùng ven Tp.HCM lại lên 'cơn sốt'.",
+            "thumbnail": "https://file4.batdongsan.com.vn/2018/05/04/b9sp0zUm/20180504103001-e786.jpg",
+            "content": "Liên quan đến việc 'sốt đất' nền tái diễn ở các vùng ven quận 2, quận 9, ông Phạm Đăng Hồ, Phó trưởng Phòng phát triển nhà – Sở Xây dựng Tp.HCM cho biết, nguyên nhân dẫn đến tình trạng 'sốt đất' là do dự báo về phát triển kinh tế Việt Nam nói chung và Tp.HCM trong năm 2018 có tăng trưởng tốt, người dân nắm thông tin này nên đầu tư.Ngoài ra, trên các địa bàn quận 2, quận 9 đang tập trung đầu tư xây dựng nhiều dự án giao thông, hạ tầng như nút giao Mỹ Thủy, nâng cấp các tuyến đường như Nguyễn Cư Trinh, Đỗ Xuân Hợp, tuyến đường sắt đô thị.... khiến đất ở đây tăng giá.Cùng với đó, Tp.HCM đã có chủ trương xây dựng khu đô thị sáng tạo ở khu Đông gồm quận 2, 9 và Thủ Đức, cũng là lý do tạo 'sốt đất'. Đặc biệt là sau vụ cháy chung cư Carina trong tháng 3, tâm lý của người dân bị ảnh hưởng khiến nhiều người muốn đầu tư đất nền.",
+            "category": {
+                "name": "market"
+            }
+        },
+        {
+            "id": 1,
+            "title": "Các đối tượng tung tin ảo gây 'sốt đất' tại Tp.HCM sẽ bị xử lý",
+            "datecreated": 1525610542,
+            "headline": "Sở Xây dựng Tp.HCM sẽ đề nghị cơ quan chức năng, chính quyền địa phương xử lý các đối tượng tung tin sai lệch khiến giá đất tại vùng ven Tp.HCM lại lên 'cơn sốt'.",
+            "thumbnail": "https://file4.batdongsan.com.vn/2018/05/04/b9sp0zUm/20180504103001-e786.jpg",
+            "content": "Liên quan đến việc 'sốt đất' nền tái diễn ở các vùng ven quận 2, quận 9, ông Phạm Đăng Hồ, Phó trưởng Phòng phát triển nhà – Sở Xây dựng Tp.HCM cho biết, nguyên nhân dẫn đến tình trạng 'sốt đất' là do dự báo về phát triển kinh tế Việt Nam nói chung và Tp.HCM trong năm 2018 có tăng trưởng tốt, người dân nắm thông tin này nên đầu tư.Ngoài ra, trên các địa bàn quận 2, quận 9 đang tập trung đầu tư xây dựng nhiều dự án giao thông, hạ tầng như nút giao Mỹ Thủy, nâng cấp các tuyến đường như Nguyễn Cư Trinh, Đỗ Xuân Hợp, tuyến đường sắt đô thị.... khiến đất ở đây tăng giá.Cùng với đó, Tp.HCM đã có chủ trương xây dựng khu đô thị sáng tạo ở khu Đông gồm quận 2, 9 và Thủ Đức, cũng là lý do tạo 'sốt đất'. Đặc biệt là sau vụ cháy chung cư Carina trong tháng 3, tâm lý của người dân bị ảnh hưởng khiến nhiều người muốn đầu tư đất nền.",
+            "category": {
+                "name": "market"
+            }
+        },
+        {
+            "id": 1,
+            "title": "Các đối tượng tung tin ảo gây 'sốt đất' tại Tp.HCM sẽ bị xử lý",
+            "datecreated": 1525610542,
+            "headline": "Sở Xây dựng Tp.HCM sẽ đề nghị cơ quan chức năng, chính quyền địa phương xử lý các đối tượng tung tin sai lệch khiến giá đất tại vùng ven Tp.HCM lại lên 'cơn sốt'.",
+            "thumbnail": "https://file4.batdongsan.com.vn/2018/05/04/b9sp0zUm/20180504103001-e786.jpg",
+            "content": "Liên quan đến việc 'sốt đất' nền tái diễn ở các vùng ven quận 2, quận 9, ông Phạm Đăng Hồ, Phó trưởng Phòng phát triển nhà – Sở Xây dựng Tp.HCM cho biết, nguyên nhân dẫn đến tình trạng 'sốt đất' là do dự báo về phát triển kinh tế Việt Nam nói chung và Tp.HCM trong năm 2018 có tăng trưởng tốt, người dân nắm thông tin này nên đầu tư.Ngoài ra, trên các địa bàn quận 2, quận 9 đang tập trung đầu tư xây dựng nhiều dự án giao thông, hạ tầng như nút giao Mỹ Thủy, nâng cấp các tuyến đường như Nguyễn Cư Trinh, Đỗ Xuân Hợp, tuyến đường sắt đô thị.... khiến đất ở đây tăng giá.Cùng với đó, Tp.HCM đã có chủ trương xây dựng khu đô thị sáng tạo ở khu Đông gồm quận 2, 9 và Thủ Đức, cũng là lý do tạo 'sốt đất'. Đặc biệt là sau vụ cháy chung cư Carina trong tháng 3, tâm lý của người dân bị ảnh hưởng khiến nhiều người muốn đầu tư đất nền.",
+            "category": {
+                "name": "market"
+            }
+        },
+        {
+            "id": 1,
+            "title": "Các đối tượng tung tin ảo gây 'sốt đất' tại Tp.HCM sẽ bị xử lý",
+            "datecreated": 1525610542,
+            "headline": "Sở Xây dựng Tp.HCM sẽ đề nghị cơ quan chức năng, chính quyền địa phương xử lý các đối tượng tung tin sai lệch khiến giá đất tại vùng ven Tp.HCM lại lên 'cơn sốt'.",
+            "thumbnail": "https://file4.batdongsan.com.vn/2018/05/04/b9sp0zUm/20180504103001-e786.jpg",
+            "content": "Liên quan đến việc 'sốt đất' nền tái diễn ở các vùng ven quận 2, quận 9, ông Phạm Đăng Hồ, Phó trưởng Phòng phát triển nhà – Sở Xây dựng Tp.HCM cho biết, nguyên nhân dẫn đến tình trạng 'sốt đất' là do dự báo về phát triển kinh tế Việt Nam nói chung và Tp.HCM trong năm 2018 có tăng trưởng tốt, người dân nắm thông tin này nên đầu tư.Ngoài ra, trên các địa bàn quận 2, quận 9 đang tập trung đầu tư xây dựng nhiều dự án giao thông, hạ tầng như nút giao Mỹ Thủy, nâng cấp các tuyến đường như Nguyễn Cư Trinh, Đỗ Xuân Hợp, tuyến đường sắt đô thị.... khiến đất ở đây tăng giá.Cùng với đó, Tp.HCM đã có chủ trương xây dựng khu đô thị sáng tạo ở khu Đông gồm quận 2, 9 và Thủ Đức, cũng là lý do tạo 'sốt đất'. Đặc biệt là sau vụ cháy chung cư Carina trong tháng 3, tâm lý của người dân bị ảnh hưởng khiến nhiều người muốn đầu tư đất nền.",
+            "category": {
+                "name": "market"
+            }
+        }
+    ]
+    public static TOPICS: any[] = [
+        {
+            "title": "Thị trường TP. HCM"
+        },
+        {
+            "title": "Đất Phú Quốc"
+        },
+        {
+            "title": "Đặc khu kinh tế"
+        },
+        {
+            "title": "Căn hộ siêu sang quận 2"
+        },        
+        {
+            "title": "Tái định cư khu Tân Tạo"
         }
     ]
 }

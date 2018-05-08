@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NewsService } from '../../service/news.service';
+import { INews } from '../../interfaces/IEntity';
 @Component({
   selector: 'app-news-list-page',
   templateUrl: './news-list-page.component.html',
@@ -7,12 +9,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NewsListPageComponent implements OnInit {
 
+  category: string;
+  newslist: INews[]
+  topics: any[]
+
   constructor(
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private newsService: NewsService
+  ) { 
+    this.route.params.subscribe( params =>
+      this.category = params.category
+    );
+    this.newsService.getNewsByCategory('market').subscribe( data => {
+      this.newslist = data
+    })
+    this.topics = this.newsService.getTopics()
+  }
 
   ngOnInit() {
-    this.route.params.subscribe( params => console.log(params.category) );
+    
   }
 
 }

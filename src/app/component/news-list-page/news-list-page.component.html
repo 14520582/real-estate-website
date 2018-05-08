@@ -1,3 +1,9 @@
-<p>
-  {{caterogy}}
-</p>
+<div class="section-container" fxLayout="row">
+  <div fxFlex="70">
+    <app-news-card *ngFor="let news of newslist" [news]="news"></app-news-card>
+  </div>
+  <div fxFlex="30">
+    <app-list-card [list]="newslist" [name]="'ĐỌC NHIỀU NHẤT'"></app-list-card>
+    <app-list-card [list]="topics" [name]="'CHỦ ĐỀ ĐƯỢC QUAN TÂM'"></app-list-card>
+  </div>
+</div>

@@ -6,12 +6,25 @@ interface IArtist {
     country: ICountry
 }
 interface ICountry {
-    id: number;
+    id?: number;
     name: string;
 }
 interface IGenre {
-    id: number;
+    id?: number;
     name: string
+}
+interface ICategory {
+    id?: number;
+    name: string
+}
+interface INews {
+    id: number;
+    title: string;
+    datecreated: number;
+    headline: string;
+    thumbnail: string;
+    content: string;
+    category: ICategory;
 }
 interface IAlbum {
     id: number;
@@ -66,5 +79,6 @@ export {
     IUser,
     ILoginFormErrors,
     IBook,
+    INews,
     IRealEstate
 };
