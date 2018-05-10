@@ -1,6 +1,6 @@
 <form [formGroup]="filterForm">
   <div fxLayout="row" fxLayoutAlign="space-around center">
-    <div class="selection-bar">
+    <div class="selection-bar has-border">
       <mat-icon>location_city</mat-icon>
       <mat-form-field>
         <mat-select formControlName="city">
@@ -9,7 +9,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="selection-bar">
+    <div class="selection-bar has-border">
       <mat-icon>location_on</mat-icon>
       <mat-form-field>
         <mat-select  formControlName="district">
@@ -18,7 +18,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="selection-bar">
+    <div class="selection-bar has-border">
       <mat-icon>all_out</mat-icon>
       <mat-form-field>
         <mat-select formControlName="ward">
@@ -27,7 +27,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="selection-bar">
+    <div class="selection-bar has-border">
       <mat-icon>home</mat-icon>
       <mat-form-field>
         <mat-select formControlName="type">
@@ -38,27 +38,19 @@
     </div>
     <div class="selection-bar">
       <mat-icon>monetization_on</mat-icon>
-      <mat-form-field>
-        <mat-select formControlName="type">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
-        </mat-select>
-      </mat-form-field>
+      <mat-slider formControlName="price" step="1" max="10" min="0" thumbLabel></mat-slider>
+      <div>{{filterForm.controls['price'].value | priceFilter}}</div>
     </div>
     <div class="selection-bar">
       <mat-icon>details</mat-icon>
-      <mat-form-field>
-        <mat-select formControlName="type">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
-        </mat-select>
-      </mat-form-field>
+      <mat-slider formControlName="area" step="20" max="140" min="0" thumbLabel></mat-slider>
+      <div>{{filterForm.controls['area'].value | areaFilter}}</div>
     </div>
     <button mat-raised-button color="primary">Tìm kiếm</button>
     <button mat-raised-button color="primary" (click)="expand()">Mở rộng</button>
   </div>
   <div *ngIf="isExpanded" fxLayout="row" fxLayoutAlign="start center">
-    <div class="selection-bar expand">
+    <div class="selection-bar expand  has-border">
       <mat-icon>clear_all</mat-icon>
       <mat-form-field>
         <mat-select formControlName="floor">
@@ -67,7 +59,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="selection-bar expand">
+    <div class="selection-bar expand  has-border">
       <mat-icon>directions</mat-icon>
       <mat-form-field>
         <mat-select formControlName="direction">
@@ -78,7 +70,7 @@
     </div>
     <div class="choose-number-panel expand">
       <div>Phòng ngủ:   </div>
-      <mat-radio-group class="radio-group">
+      <mat-radio-group class="radio-group" formControlName="numberOfBedRoom">
         <mat-radio-button value="1">1</mat-radio-button>
         <mat-radio-button value="2">2</mat-radio-button>
         <mat-radio-button value="3">3</mat-radio-button>
@@ -88,7 +80,7 @@
     </div>
     <div class="choose-number-panel expand">
       <div>Phòng tắm:   </div>
-      <mat-radio-group class="radio-group">
+      <mat-radio-group class="radio-group" formControlName="numberOfBathRoom">
         <mat-radio-button value="1">1</mat-radio-button>
         <mat-radio-button value="2">2</mat-radio-button>
         <mat-radio-button value="3">3</mat-radio-button>

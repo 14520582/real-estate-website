@@ -19,5 +19,8 @@ export class NavComponent implements OnInit {
   navigateToNewsList(category) {
     this.router.navigate(['/news-list/', category]);
   }
+  goPostPage(){
+    this.router.navigate(['/post']);
+  }
 
 }

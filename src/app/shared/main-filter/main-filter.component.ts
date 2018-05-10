@@ -76,14 +76,12 @@ export class MainFilterComponent implements OnInit {
       district: ['all', Validators.required],
       ward: ['all', Validators.required],
       type: ['all', Validators.required],
-      lowestPrice: ['', Validators.required],
-      highestPrice: ['', Validators.required],
-      minArea: ['', Validators.required],
-      maxArea: ['', Validators.required],
+      price: [0, Validators.required],
+      area: [0, Validators.required],
       floor: ['all', Validators.required],
       direction: ['all', Validators.required],
-      numberOfBedRoom: ['', Validators.required],
-      numberOfBathRoom: ['', Validators.required]
+      numberOfBedRoom: [1, Validators.required],
+      numberOfBathRoom: [1, Validators.required]
     });
   }
 

@@ -2,4 +2,9 @@
   <div>
     <app-main-filter></app-main-filter>
   </div>
+  <div
+    fxLayout="row wrap" 
+    fxLayout.xs="column"> 
+      <app-real-estate-card *ngFor="let item of realEstateData" fxFlex="25%" [item] = "item"></app-real-estate-card>
+  </div>
 </div>

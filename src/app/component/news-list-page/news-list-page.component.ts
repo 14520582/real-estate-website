@@ -17,17 +17,18 @@ export class NewsListPageComponent implements OnInit {
     private route: ActivatedRoute,
     private newsService: NewsService
   ) { 
-    this.route.params.subscribe( params =>
-      this.category = params.category
-    );
-    this.newsService.getNewsByCategory('market').subscribe( data => {
-      this.newslist = data
-    })
-    this.topics = this.newsService.getTopics()
+      this.route.params.subscribe( params => {
+        this.category = params.category
+        console.log(this.category)
+        this.newsService.getNewsByCategory('market').subscribe( data => {
+          this.newslist = data
+        })
+        this.topics = this.newsService.getTopics()
+      });
+
   }
 
   ngOnInit() {
-    
   }
 
 }

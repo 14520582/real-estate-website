@@ -16,6 +16,8 @@ import { MainFilterComponent } from './main-filter/main-filter.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { DateCreatedPipe } from './pipes/date-created.pipe';
 import { ListCardComponent } from './list-card/list-card.component';
+import { PriceFilterPipe } from './pipes/price-filter.pipe';
+import { AreaFilterPipe } from './pipes/area-filter.pipe';
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -28,7 +30,9 @@ import { ListCardComponent } from './list-card/list-card.component';
     MainFilterComponent,
     NewsCardComponent,
     DateCreatedPipe,
-    ListCardComponent
+    ListCardComponent,
+    PriceFilterPipe,
+    AreaFilterPipe
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { NewsPageComponent } from './component/news-page/news-page.component';
 import { DetailItemComponent } from './component/detail-item/detail-item.component';
 import { SectionComponent } from './component/section/section.component'
 import { NewsListPageComponent} from './component/news-list-page/news-list-page.component';
+import { PostPageComponent } from './component/post-page/post-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'property/:type/:area', component: SectionComponent },
   { path: 'news-list/:category', component: NewsListPageComponent },
   { path: 'news/:id', component: NewsPageComponent },
+  { path: 'post', component: PostPageComponent },
   { path: 'home', component: HomeComponent },
 ];
 

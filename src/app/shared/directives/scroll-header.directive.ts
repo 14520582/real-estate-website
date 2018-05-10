@@ -4,6 +4,7 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
   selector: '[appScrollHeader]'
 })
 export class ScrollHeaderDirective {
+
   @HostBinding('style.background-color') color: string = "rgba(255,255,255,0.85)";
   @HostListener("window:scroll")
   onWindowScroll() {
@@ -14,6 +15,8 @@ export class ScrollHeaderDirective {
       this.color = "rgba(255,255,255,0.85)";
     }
   }
-  constructor() { }
+  constructor(
+  ) { 
+  }
 
 }

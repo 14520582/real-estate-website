@@ -13,6 +13,7 @@ import { SectionComponent } from './section/section.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { NewsListPageComponent } from './news-list-page/news-list-page.component';
 import { NewsService } from '../service/news.service';
+import { PostPageComponent } from './post-page/post-page.component';
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -22,7 +23,8 @@ import { NewsService } from '../service/news.service';
       FooterComponent,
       SectionComponent,
       NewsPageComponent,
-      NewsListPageComponent
+      NewsListPageComponent,
+      PostPageComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { NewsService } from '../service/news.service';
     LoginComponent,
     LayoutComponent,
     DetailItemComponent,
-    FooterComponent
+    FooterComponent,
+    PostPageComponent
   ],
   providers: [RealEstateService, AuthenticateService, NewsService],
 })

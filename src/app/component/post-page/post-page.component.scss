@@ -1,0 +1,31 @@
+.field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+    mat-radio-button {
+        font-weight: 500
+    }
+}
+.number {
+    border: 1px solid rgb(29, 172, 29);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 6px;
+}
+.category {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.radio-group {
+    margin-left: 6px;
+    margin-top: 7px;
+    mat-radio-button {
+        margin-right: 4px
+    }
+}

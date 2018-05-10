@@ -5,16 +5,16 @@
             <span class="navbar-toggler-bar"></span>
             <span class="navbar-toggler-bar"></span>
         </button>
-        <a class="navbar-brand" href="http://localhost:4200/">FindHouse</a>
+        <a class="navbar-brand" href="http://localhost:4200">FindHouse</a>
   </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Mua</a>
+        <a class="nav-link">Mua</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/news">Thuê</a>
+        <a class="nav-link">Thuê</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" #menuTriggerNews="matMenuTrigger" (mouseenter)="menuTriggerNews.openMenu()" [matMenuTriggerFor]="news">Tin tức</a>
@@ -34,7 +34,7 @@
         <a class="nav-link" href="#">Về chúng tôi</a>
     </li>
     </ul>
-    <button mat-raised-button class="btn btn-post">Đăng tin</button>
+    <button mat-raised-button class="btn btn-post" (click)="goPostPage()">Đăng tin</button>
   </div>
 </nav>
 

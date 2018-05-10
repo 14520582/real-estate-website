@@ -15,17 +15,17 @@ export class TabFilterComponent implements OnInit {
   typeSelected: string = "buy"
   areaSelected: string = ''
   locations = [
-    { label: 'Quận 1', value: 'quan-1'}, 
-    { label: 'Quận 2', value: 'quan-2'}, 
-    { label: 'Quận 3', value: 'quan-3'},
-    { label: 'Quận 4', value: 'quan-4'}, 
-    { label: 'Quận 5', value: 'quan-5'},
-    { label: 'Bình Thạnh', value: 'binh-thanh'},
-    { label: 'Hóc Môn', value: 'hoc-mon'},
-    { label: 'Củ Chỉ', value: 'cu-chi'},
-    { label: 'Bình Tân', value: 'binh-tan'},
-    { label: 'Gò Vấp', value: 'go-vap'},
-    { label: 'Thủ Đức', value: 'thu-duc'}
+    'Quận 1', 
+    'Quận 2', 
+    'Quận 3',
+    'Quận 4', 
+    'Quận 5',
+    'Bình Thạnh',
+    'Hóc Môn',
+    'Củ Chỉ',
+    'Bình Tân',
+    'Gò Vấp',
+    'Thủ Đức'
   ];
   constructor(
     private router: Router
