@@ -4,9 +4,6 @@ mat-card {
 .mat-card {
     padding: 8px !important;
 }
-img {
-    margin-right: 16px;
-}
 .mat-card-title {
     font-size: 20px;
     font-weight: 500;
@@ -17,7 +14,7 @@ img {
     color: black
 }
 .thumbnail{
-    width: 100px;
-    height: 100px
-
+    margin-right: 16px;
+    height: 180px;
+    width: 180px;
 }

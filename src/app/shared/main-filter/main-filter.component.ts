@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import { Data } from '../../utils/data'
 @Component({
   selector: 'app-main-filter',
   templateUrl: './main-filter.component.html',
@@ -8,63 +8,20 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class MainFilterComponent implements OnInit {
 
-  districts = [
-    'Quận 1', 
-    'Quận 2', 
-    'Quận 3',
-    'Quận 4',
-    'Quận 5',
-    'Bình Thạnh',
-    'Hóc Môn',
-    'Củ Chỉ',
-    'Bình Tân',
-    'Gò Vấp',
-    'Thủ Đức'
-  ];
+  districts: string[] = Data.districts;
 
-  cities = [
-    'Hồ Chí Minh', 
-    'Hà Nội',
-    'Đà Nẵng'
-  ];
+  cities: string[] = Data.cities;
 
-  wards = [
-    'Phường 2',
-    'Phường 3',
-    'Phường 4',
-    'Phường 5',
-    'Phường 6',
-  ];
+  wards: string[] = Data.wards;
 
-  types = [
-    'Nhà riêng',
-    'Đất nền',
-    'Chung cư'
-  ];
+  types: string[] = Data.types;
 
-  directions= [
-    'Đông',
-    'Tây',
-    'Nam',
-    'Bắc'
-  ];
+  directions: string[] = Data.directions;
 
-  floors = [
-    'Chỉ tầng trệt',
-    '1',
-    '2',
-    '3'
-  ]
+  floors: string[] = Data.floors;
 
-  prices = [
-    {value: 0, label: 'Tất cả'},
-    {value: 2, label: '< 2 tỷ'},
-    {value: 4, label: '< 4 tỷ'},
-    {value: 5, label: '< 6 tỷ'},
-    {value: 8, label: '< 8 tỷ'},
-    {value: 10, label: '< 10 tỷ'},
-    {value: 11, label: '10 tỷ +'},
-  ]
+  prices: any[] = Data.prices;
+
   isExpanded: boolean = false;
   filterForm: FormGroup;
 

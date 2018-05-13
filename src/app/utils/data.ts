@@ -337,4 +337,61 @@ export class Data {
             "title": "Tái định cư khu Tân Tạo"
         }
     ]
+    public static districts: string[] = [
+        'Quận 1', 
+        'Quận 2', 
+        'Quận 3',
+        'Quận 4',
+        'Quận 5',
+        'Bình Thạnh',
+        'Hóc Môn',
+        'Củ Chỉ',
+        'Bình Tân',
+        'Gò Vấp',
+        'Thủ Đức'
+      ];
+    
+    public static cities: string[] = [
+        'Hồ Chí Minh', 
+        'Hà Nội',
+        'Đà Nẵng'
+    ];
+    
+    public static wards: string[] = [
+        'Phường 2',
+        'Phường 3',
+        'Phường 4',
+        'Phường 5',
+        'Phường 6',
+    ];
+    
+    public static types: string[] = [
+        'Nhà riêng',
+        'Đất nền',
+        'Chung cư'
+      ];
+    
+    public static directions: string[] = [
+        'Đông',
+        'Tây',
+        'Nam',
+        'Bắc'
+      ];
+    
+    public static floors: string[] = [
+        'Chỉ tầng trệt',
+        '1',
+        '2',
+        '3'
+    ]
+    
+    public static prices: any[] = [
+        {value: 0, label: 'Tất cả'},
+        {value: 2, label: '< 2 tỷ'},
+        {value: 4, label: '< 4 tỷ'},
+        {value: 5, label: '< 6 tỷ'},
+        {value: 8, label: '< 8 tỷ'},
+        {value: 10, label: '< 10 tỷ'},
+        {value: 11, label: '10 tỷ +'},
+    ]
 }

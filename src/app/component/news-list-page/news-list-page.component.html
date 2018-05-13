@@ -1,8 +1,19 @@
 <div class="section-container" fxLayout="row">
-  <div fxFlex="70">
-    <app-news-card *ngFor="let news of newslist" [news]="news"></app-news-card>
+  <div fxFlex="25">
+    <app-real-estate-card *ngFor="let item of realEstateData" [item] = "item"></app-real-estate-card>
   </div>
-  <div fxFlex="30">
+  <div fxFlex="50">
+    <app-news-card *ngFor="let news of newslist" [news]="news"></app-news-card>
+    <div class="paging">
+      <div>
+        <button mat-raised-button (click)="changePage(false)" *ngIf="indexOfPage !== 0">Previous</button>
+      </div>
+      <div>
+        <button mat-raised-button (click)="changePage(true)" *ngIf="indexOfPage !== numOfPage">Next</button>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="25">
     <app-list-card [list]="newslist" [name]="'ĐỌC NHIỀU NHẤT'"></app-list-card>
     <app-list-card [list]="topics" [name]="'CHỦ ĐỀ ĐƯỢC QUAN TÂM'"></app-list-card>
   </div>

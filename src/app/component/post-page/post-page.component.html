@@ -6,7 +6,6 @@
       <mat-radio-group class="radio-group" formControlName="form">
         <mat-radio-button checked value="0">Bán</mat-radio-button>
         <mat-radio-button value="1">Cho thuê</mat-radio-button>
-
       </mat-radio-group>
     </div>
     <div class="field">
@@ -21,30 +20,147 @@
     <div class="field">
       <div class="number">3</div>
       <div class="category">Địa chỉ:</div>
+      <div>
+        <div fxLayout="row">
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <mat-select formControlName="city">
+                <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <mat-select formControlName="district">
+                <mat-option *ngFor="let district of districts" [value]="district">{{district}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <mat-select formControlName="ward">
+                <mat-option *ngFor="let ward of wards" [value]="ward">{{ward}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <input matInput placeholder="Số nhà" formControlName="no">
+            </mat-form-field>
+          </div>
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <input matInput placeholder="Đường" formControlName="street">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="field">
       <div class="number">4</div>
       <div class="category">Diện tích:</div>
+      <div class="selection-bar has-border area">
+        <mat-form-field>
+          <input matInput formControlName="area">
+        </mat-form-field>
+        <div>m²</div>
+      </div>
+      <div class="selection-bar has-border area">
+        <div>Dài</div>
+        <mat-form-field>
+          <input matInput formControlName="length">
+        </mat-form-field>
+        <div>m</div>
+      </div>
+      <div class="selection-bar has-border area">
+        <div>Rộng</div>
+        <mat-form-field>
+          <input matInput formControlName="width">
+        </mat-form-field>
+        <div>m</div>
+      </div>
     </div>
     <div class="field">
       <div class="number">5</div>
       <div class="category">Giấy chủ quyền:</div>
+      <mat-radio-group class="radio-group" formControlName="license">
+        <mat-radio-button checked value="0">Sổ đỏ</mat-radio-button>
+        <mat-radio-button value="1">Sổ hồng</mat-radio-button>
+        <mat-radio-button value="2">Khác</mat-radio-button>
+      </mat-radio-group>
     </div>
     <div class="field">
       <div class="number">6</div>
       <div class="category">Họ tên:</div>
+      <div class="selection-bar has-border">
+        <mat-form-field>
+          <input matInput formControlName="name">
+        </mat-form-field>
+      </div>
     </div>
     <div class="field">
       <div class="number">7</div>
       <div class="category">Điện thoại:</div>
+      <div class="selection-bar has-border">
+        <mat-form-field>
+          <input matInput formControlName="phone">
+        </mat-form-field>
+      </div>
     </div>
     <div class="field">
       <div class="number">8</div>
       <div class="category">Email:</div>
+      <div class="selection-bar has-border">
+        <mat-form-field>
+          <input matInput formControlName="email">
+        </mat-form-field>
+      </div>
     </div>
     <div class="field">
       <div class="number">9</div>
       <div class="category">Nhu cầu khác:</div>
     </div>
+    <div class="field">
+      <div class="number">10</div>
+      <div class="category">Thông tin mở rộng:</div>
+      <div>
+        <div fxLayout="row">
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <input matInput placeholder="Số tầng" formControlName="floor">
+            </mat-form-field>
+          </div>
+          <div class="selection-bar expand  has-border">
+            <mat-form-field>
+              <mat-select placeholder="Hướng" formControlName="direction">
+                <mat-option *ngFor="let direction of directions" [value]="direction">{{direction}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <input matInput placeholder="Số phòng tắm" formControlName="numberOfBedRoom">
+            </mat-form-field>
+          </div>
+          <div class="selection-bar has-border">
+            <mat-form-field>
+              <input matInput placeholder="Số phòng ngủ" formControlName="numberOfBathRoom">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
+  <div fxLayout="row">
+    <mat-checkbox [(ngModel)]="checked"></mat-checkbox>
+    <div class="statement">Tôi đồng ý với
+      <span>điều khoản sử dụng</span> và
+      <span>biểu phí giao dịch</span>
+    </div>
+  </div>
+  <button class="comfirm-btn" mat-raised-button color="warn">Gửi thông tin</button>
 </div>

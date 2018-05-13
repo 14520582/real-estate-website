@@ -1,0 +1,13 @@
+.paging {
+    margin: 16px;
+    button {
+        background-color: rgba(67,160,71 ,.9);
+        color: white;
+    }
+}
+.paging div {
+    float: left;
+}
+.paging div:last-child {
+    float: right;
+}
