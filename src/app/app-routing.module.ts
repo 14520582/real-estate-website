@@ -7,6 +7,8 @@ import { DetailItemComponent } from './component/detail-item/detail-item.compone
 import { SectionComponent } from './component/section/section.component'
 import { NewsListPageComponent} from './component/news-list-page/news-list-page.component';
 import { PostPageComponent } from './component/post-page/post-page.component';
+import { AboutComponent } from './component/about/about.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'detail-real-estate/:id', component: DetailItemComponent },
   { path: 'property/:type/:area', component: SectionComponent },
   { path: 'news-list/:category', component: NewsListPageComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'news/:id', component: NewsPageComponent },
   { path: 'post', component: PostPageComponent },
   { path: 'home', component: HomeComponent },

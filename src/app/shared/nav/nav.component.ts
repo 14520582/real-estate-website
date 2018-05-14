@@ -22,5 +22,10 @@ export class NavComponent implements OnInit {
   goPostPage(){
     this.router.navigate(['/post']);
   }
-
+  goAboutPage(){
+    this.router.navigate(['/about']);
+  }
+  goContactPage(){
+    this.router.navigate(['/contact']);
+  }
 }

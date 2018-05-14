@@ -14,6 +14,8 @@ import { NewsPageComponent } from './news-page/news-page.component';
 import { NewsListPageComponent } from './news-list-page/news-list-page.component';
 import { NewsService } from '../service/news.service';
 import { PostPageComponent } from './post-page/post-page.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -24,7 +26,9 @@ import { PostPageComponent } from './post-page/post-page.component';
       SectionComponent,
       NewsPageComponent,
       NewsListPageComponent,
-      PostPageComponent
+      PostPageComponent,
+      AboutComponent,
+      ContactComponent
   ],
   imports: [
     CommonModule,
