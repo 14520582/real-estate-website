@@ -1,8 +1,8 @@
 <div class="search-view">
-  <h1>{{slogan.get(typeSelected)}}</h1>
+  <h1>{{slogan.get(formSelected)}}</h1>
   <div class="btn-group btn-group-lg">
-    <button class="btn btn-transparent" (click)="changeOption('buy')" [ngClass]="{active: isActive('buy')}">Mua</button>
-    <button class="btn btn-transparent" (click)="changeOption('rent')" [ngClass]="{active: isActive('rent')}">Thuê</button>
+    <button class="btn btn-transparent" (click)="changeOption(1)" [ngClass]="{active: isActive(1)}">Mua</button>
+    <button class="btn btn-transparent" (click)="changeOption(2)" [ngClass]="{active: isActive(2)}">Thuê</button>
     <!-- <button class="btn btn-transparent" (click)="changeOption('sell')" [ngClass]="{active: isActive('sell')}">Sell</button> -->
   </div>
   <div class="search-bar">

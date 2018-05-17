@@ -10,10 +10,12 @@ import {Data} from '../../utils/data'
 export class HomeComponent implements OnInit {
   realEstateData : IRealEstate[];
   data : string;
+  newList: IRealEstate[];
   constructor(private realEstateService: RealEstateService) {
   }
   ngOnInit() {
     this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
+    this.realEstateService.getNewList(10).subscribe ( data => this.newList = data)
   }
 
 }

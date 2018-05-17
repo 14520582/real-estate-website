@@ -2,9 +2,8 @@
     <div class="page-header section-dark" style="background-image: url('assets/img/garden.jpg')">
         <app-tab-filter></app-tab-filter>
     </div>
-    <app-carousel [category]="'New Listings'"></app-carousel>
-    <app-carousel [category]="'Downtown'"></app-carousel>
-    <app-carousel [category]="'Suburb'"></app-carousel>
-    <app-carousel [category]="'Safe Neighborhoods'"></app-carousel>
-    <app-carousel [category]="'Fixer Upper Homes'"></app-carousel>
+    <app-carousel [category]="'Mới'" [realEstateData]="newList"></app-carousel>
+    <app-carousel [category]="'Nội thành'" [realEstateData]="realEstateData"></app-carousel>
+    <app-carousel [category]="'Ngoại ô'" [realEstateData]="realEstateData"></app-carousel>
+    <app-carousel [category]="'Khu vực an ninh'" [realEstateData]="realEstateData"></app-carousel>
 </div>

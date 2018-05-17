@@ -8,12 +8,12 @@ import {IRealEstate} from '../../interfaces/IEntity'
 })
 export class CarouselComponent implements OnInit {
   @Input() category : string;
-  realEstateData : IRealEstate[];
+  @Input() realEstateData : IRealEstate[];
   data : string;
   constructor(private realEstateService: RealEstateService) {
   }
   ngOnInit() {
-    this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
+    // this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
   }
 
 }

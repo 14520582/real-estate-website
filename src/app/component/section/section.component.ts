@@ -9,16 +9,18 @@ import { RealEstateService } from '../../service/real-estate.service';
 })
 export class SectionComponent implements OnInit {
   realEstateData : IRealEstate[];
-  area: string;
-  type: string;
+  district: string;
+  form: number;
   constructor(
     private route: ActivatedRoute,
     private realEstateService: RealEstateService
   ) {
     this.route.params.subscribe( params => {
-      this.area = params.area;
-      this.type = params.type;
-      this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
+      this.realEstateData = [];
+      this.district = params.district;
+      this.form = params.form;
+      if(params.district)
+        this.realEstateService.getByDistrictAndForm(this.district, this.form).subscribe( data => this.realEstateData = data)
     });
   }
 

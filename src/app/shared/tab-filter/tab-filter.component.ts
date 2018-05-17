@@ -8,11 +8,10 @@ import { Router } from '@angular/router';
 })
 export class TabFilterComponent implements OnInit {
   slogan = new Map([
-    ["buy","Find your way home"],
-    ["rent","Find your next rental"],
-    ["sell","Sell your home"]
+    [1,"Find your way home"],
+    [2,"Find your next rental"]
   ]);
-  typeSelected: string = "buy"
+  formSelected: number = 1
   areaSelected: string = ''
   locations = [
     'Quận 1', 
@@ -34,12 +33,12 @@ export class TabFilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeOption(type: string){
-    this.typeSelected = type
+  changeOption(form: number){
+    this.formSelected = form
   }
 
-  isActive(type: string) {
-    if(type == this.typeSelected)
+  isActive(form: number) {
+    if(form == this.formSelected)
       return true
     else
       return false
@@ -47,6 +46,6 @@ export class TabFilterComponent implements OnInit {
 
   toSection(){
     if(this.areaSelected && this.areaSelected != '')
-      this.router.navigate(['/property/', this.typeSelected, this.areaSelected]);
+      this.router.navigate(['/property/', {form: this.formSelected, district: this.areaSelected}]);
   }
 }

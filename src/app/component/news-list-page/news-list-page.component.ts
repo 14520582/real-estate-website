@@ -11,10 +11,11 @@ import { RealEstateService } from '../../service/real-estate.service';
 export class NewsListPageComponent implements OnInit {
   realEstateData : IRealEstate[];
   category: string;
-  newslist: INews[]
+  newsData: INews[];
+  mostViewsData: INews[];
   topics: any[]
   indexOfPage: number = 0;
-  numOfPage: number = 10;
+  numOfPage: number = 0;
   constructor(
     private route: ActivatedRoute,
     private realEstateService: RealEstateService,
@@ -23,9 +24,13 @@ export class NewsListPageComponent implements OnInit {
       this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
       this.route.params.subscribe( params => {
         this.category = params.category
-        console.log(this.category)
-        this.newsService.getNewsByCategory('market').subscribe( data => {
-          this.newslist = data
+        this.indexOfPage = 0;
+        this.newsService.getNewsMostView().subscribe( data => {
+          this.mostViewsData = data;
+        })
+        this.newsService.getNewsByPageAndCategory(this.category,0).subscribe( data => {
+          this.newsData = data.content;
+          this.numOfPage = data.totalPages;
         })
         this.topics = this.newsService.getTopics()
       });
@@ -42,6 +47,9 @@ export class NewsListPageComponent implements OnInit {
     if(!isNext && this.indexOfPage > 0) {
       this.indexOfPage -= 1;
     }
+    this.newsService.getNewsByPageAndCategory(this.category,this.indexOfPage).subscribe( data => {
+      this.newsData = data.content;
+    })
     console.log(this.indexOfPage)
   }
 }

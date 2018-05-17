@@ -2,12 +2,31 @@
   <a routerLink="/detail-real-estate/{{item.id}}">
     <img mat-card-image class="cover" src={{item.cover}} alt="Photo of {{item.name}}">
   </a>
-  <a routerLink="/detail-real-estate/{{item.id}}">
-    <mat-card-title class = "title">{{item.name}}</mat-card-title>
-  </a>
-  <mat-card-title>{{item.price}}</mat-card-title>
-  <div class="sub-detail-container">
-    <mat-card-subtitle>{{item.area}}</mat-card-subtitle>
-    <mat-card-subtitle>{{item.location}}</mat-card-subtitle>
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
+    <div class="price">{{item.price}}</div>
+    <div fxLayout="row">
+      <div class="detail">
+        <mat-icon>details</mat-icon>
+        <div>3</div>
+      </div>
+      <div class="detail">
+        <mat-icon>local_hotel</mat-icon>
+        <div>3</div>
+      </div>
+      <div class="detail">
+        <mat-icon>hot_tub</mat-icon>
+        <div>3</div>
+      </div>
+      <div class="detail">
+        <mat-icon>directions</mat-icon>
+        <div>3</div>
+      </div>
+    </div>
   </div>
+  <div class="address">{{item.address.no}} {{item.address.street}}, <span>{{item.address.district.name}}</span>, <span>{{item.address.city.name}}</span></div>
+  <div class="sub-detail-container">
+  </div>
+  <a routerLink="/detail-real-estate/{{item.id}}">
+    <mat-card-title class = "title">{{item.title}}</mat-card-title>
+  </a>
 </mat-card>

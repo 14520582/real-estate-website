@@ -37,10 +37,10 @@ interface IAlbum {
 }
 interface IRealEstate {
     id: number;
-    name: string;
+    title: string;
     price: string;
     description: string;
-    location: string;
+    address: any;
     area: string;
     type: string;
     cover: string

@@ -12,10 +12,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link">Mua</a>
+        <a class="nav-link" [routerLink]="['/property', {form: 1}]">Mua</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Thuê</a>
+        <a class="nav-link" [routerLink]="['/property', {form: 2}]">Thuê</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" #menuTriggerNews="matMenuTrigger" (mouseenter)="menuTriggerNews.openMenu()" [matMenuTriggerFor]="news">Tin tức</a>
