@@ -42,5 +42,11 @@
       </li>
     </ul>
     <button mat-raised-button class="btn btn-post" (click)="goPostPage()">Đăng tin</button>
+    <button mat-raised-button class="btn btn-login" *ngIf="!authService.logged" (click)="openLoginScreen()">Đăng nhập</button>
+    <button mat-raised-button class="btn btn-login" *ngIf="authService.logged" (click)="logout()">
+      <mat-icon>
+        person_pin
+      </mat-icon>
+    </button>
   </div>
 </nav>

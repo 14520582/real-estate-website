@@ -8,7 +8,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailItemComponent } from './detail-item/detail-item.component';
 import { FooterComponent } from './footer/footer.component';
-import { AuthenticateService } from '../service/authenticate.service';
 import { SectionComponent } from './section/section.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { NewsListPageComponent } from './news-list-page/news-list-page.component';
@@ -16,6 +15,7 @@ import { NewsService } from '../service/news.service';
 import { PostPageComponent } from './post-page/post-page.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { AuthService } from '../service/auth.service';
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -43,6 +43,6 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     PostPageComponent
   ],
-  providers: [RealEstateService, AuthenticateService, NewsService],
+  providers: [RealEstateService, NewsService, AuthService],
 })
 export class MainModule { }

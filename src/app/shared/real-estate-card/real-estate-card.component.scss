@@ -20,6 +20,7 @@ mat-card-title {
 }
 .price {
     font-size: 18px;
+    margin-bottom: 3px;
     font-weight: 600
 }
 .detail {
@@ -27,14 +28,13 @@ mat-card-title {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 8px;
     margin-right: 8px;
     mat-icon {
         margin-right: 3px;
     }
 }
 .address {
-    
+    margin-top: 3px;
     span {
         color: blue;
         cursor: pointer;

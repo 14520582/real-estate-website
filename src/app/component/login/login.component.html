@@ -1,24 +1,17 @@
-<button tabindex="-1" class="close-button" mat-icon-button mat-dialog-close><mat-icon>close</mat-icon></button>
-<div
-  class="box">
-  <h3>Đăng nhập</h3>
+<div class="dialog-container">
   <form [formGroup]="loginForm">
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <mat-icon>person</mat-icon>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img src="../../../logo-findhouse.png" height="37" width="37">
+      <div class="name">FindHouse</div>
       <mat-form-field>
-          <input matInput placeholder="Username" formControlName="username">
+        <input matInput placeholder="Username" formControlName="username">
       </mat-form-field>
-    </div>
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <mat-icon>vpn_key</mat-icon>
       <mat-form-field>
-        <input type="password" matInput placeholder="Password"  formControlName="password">
+        <input type="password" matInput placeholder="Password" formControlName="password">
       </mat-form-field>
+      <mat-checkbox>Nhớ tài khoản</mat-checkbox>
+      <button mat-raised-button (click)="onLogin()">Đăng nhập</button>
+      <a>Quên mật khẩu?</a>
     </div>
-    <div class="row-space-between">
-        <mat-checkbox>Nhớ tài khoản</mat-checkbox>
-        <a routerLink="/home">Quên mật khẩu</a>
-    </div>
-    <button mat-raised-button (click)="onLogin()">Đăng nhập</button>
   </form>
 </div>

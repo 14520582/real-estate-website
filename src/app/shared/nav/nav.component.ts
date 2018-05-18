@@ -1,5 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import {Router} from '@angular/router';
+import { AuthService } from '../../service/auth.service';
+import { MatDialog } from '@angular/material';
+import { LoginComponent } from '../../component/login/login.component';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +12,9 @@ import {Router} from '@angular/router';
 export class NavComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthService,
+    private loginDialog: MatDialog
   ) { }
 
 
@@ -27,5 +32,11 @@ export class NavComponent implements OnInit {
   }
   goContactPage(){
     this.router.navigate(['/contact']);
+  }
+  openLoginScreen(){
+    this.loginDialog.open(LoginComponent)
+  }
+  logout(){
+    this.authService.logout()
   }
 }
