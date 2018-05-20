@@ -12,12 +12,15 @@ export class RealEstateService {
   constructor(private http: HttpClient) {
   }
   getAllData(): Observable<IRealEstate[]> {
-    return this.http.get<IRealEstate[]>(Constant.URL_GET_ALL_DATA);
+    return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/new?limit='+Constant.CAROUSEL_SIZE);
   }
   getNewList(limit: number): Observable<IRealEstate[]> {
     return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/new?limit='+limit);
   }
   getByDistrictAndForm(district: string, form: number): Observable<IRealEstate[]> {
     return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/' + district + '/' + form);
+  }
+  getById(id: string): Observable<IRealEstate> {
+    return this.http.get<IRealEstate>(Constant.SERVER + 'property/get/' + id);
   }
 }

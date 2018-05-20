@@ -13,7 +13,7 @@ import { ContactComponent } from './component/contact/contact.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'detail-real-estate/:id', component: DetailItemComponent },
+  { path: 'detail-real-estate', component: DetailItemComponent },
   { path: 'property', component: SectionComponent },
   { path: 'news-list/:category', component: NewsListPageComponent },
   { path: 'about', component: AboutComponent },

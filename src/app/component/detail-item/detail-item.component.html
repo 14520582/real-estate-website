@@ -1,20 +1,70 @@
-<div class="parent-container" fxLayout="row">
-  <div class="side-left" fxFlex="62">
-    <header fxLayout="row" fxLayoutAlign="space-between center" >
-      <div>{{date}}</div>
-      <div fxLayout="row" fxLayoutAlign="center center">
-          <mat-icon [ngStyle]="{'color':'rgba(21,101,192 ,1)'}" svgIcon="facebook"></mat-icon>
-          <mat-icon [ngStyle]="{'color': 'rgba(3,155,229 ,1)'}"  svgIcon="twitter"></mat-icon>
-          <mat-icon [ngStyle]="{'color':'rgba(229,57,53 ,1)'}"  svgIcon="google"></mat-icon>
+<div class="section-container">
+  <app-main-filter></app-main-filter>
+  <div class="side-left" fxLayout="row">
+    <div fxFlex="75">
+      <div fxLayout="row">
+        <div fxFlex="65" class="cover">
+          <img src={{item.cover}} style='height: 100%; width: 100%; object-fit: fix'>
+        </div>
+        <div fxFlex="35" class="details">
+          <h2>{{item.price | money}}</h2>
+          <div class="address">{{item.address.no}} {{item.address.street}},
+            <span>{{item.address.ward.name}}</span>,
+            <span>{{item.address.district.name}}</span>,
+            <span>{{item.address.city.name}}</span>
+          </div>
+          <div class="detail1">
+              <div>Hình thức: <span>{{item.form === 1 ? 'Bán' : 'Cho thuê'}}</span></div>
+          </div>
+          <div class="detail1">
+              <div>Loại: <span>{{item.type | type : item.form}}</span></div>
+          </div>
+          <div class="detail">
+            <mat-icon>details</mat-icon>
+            <div>Diện tích: {{item.area}} m²</div>
+              <div class="h-w">Dài: {{item.height}} m</div>
+              <div class="h-w">Rộng: {{item.width}} m</div>
+          </div>
+          <div class="detail">
+            <mat-icon>description</mat-icon>
+            <div>Sổ: {{item.license === 0 ? 'Sổ đỏ' : 'Sổ hồng'}}</div>
+          </div>
+          <div class="detail">
+            <mat-icon>local_hotel</mat-icon>
+            <div>Số phòng ngủ: {{item.numofbedroom}}</div>
+          </div>
+          <div class="detail">
+            <mat-icon>hot_tub</mat-icon>
+            <div>Số phòng tắm: {{item.numofbathroom}}</div>
+          </div>
+          <div class="detail">
+            <mat-icon>directions</mat-icon>
+            <div>Hướng: {{item.direction | direction}}</div>
+          </div>
+          <div class="detail">
+              <mat-icon>clear_all</mat-icon>
+              <div>Tầng: {{item.numoffloor === 0 ? 'Chỉ tầng trệt' : item.numoffloor +' lầu'}}</div>
+            </div>
+        </div>
       </div>
-    </header>
-    <h4>{{item.name}}</h4>
-    <div class="brief-detail">
-      <span class="title-category">Khu vực</span> {{item.area}}
+      <div class="owner-info" fxLayout="row" fxLayoutAlign="start center">
+        <a>LIÊN HỆ:</a>
+        <mat-icon>account_circle</mat-icon>
+        <div>{{item.nameOfOwner}}</div>
+        <mat-icon>mail</mat-icon>
+        <div>{{item.email}}</div>
+        <mat-icon>phone</mat-icon>
+        <div>{{item.phone}}</div>
+      </div>
+      <div class="title">{{item.title}}</div>
+      <h4>MÔ TẢ:</h4>
+      <div class="description">{{item.description}}</div>
+      <h4>VỊ TRÍ:</h4>
+    </div>
+    <div fxFlex="25">
+      <app-real-estate-card *ngFor="let item of realEstateData" [item]="item"></app-real-estate-card>
     </div>
   </div>
-  <div class="side-right" fxFlex>
-
-  </div>
+  <app-carousel [category]="'Khu vực gần đây'" [realEstateData]="realEstateData"></app-carousel>
+  <app-carousel [category]="'Mức giá tương tự'" [realEstateData]="realEstateData"></app-carousel>
 </div>
-

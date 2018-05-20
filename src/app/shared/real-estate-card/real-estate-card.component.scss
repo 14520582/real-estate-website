@@ -39,4 +39,8 @@ mat-card-title {
         color: blue;
         cursor: pointer;
     }
+    span:hover {
+        color: rgb(17, 17, 94);
+        text-decoration: underline;
+    }
 }

@@ -1,36 +1,37 @@
 <mat-card class="real-estate-card">
-  <a routerLink="/detail-real-estate/{{item.id}}">
+  <a [routerLink]="['/detail-real-estate', {id: item.id}]">
     <img mat-card-image class="cover" src={{item.cover}} alt="Photo of {{item.name}}">
   </a>
   <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
-    <div class="price">{{item.price}}</div>
-    <div>Cho thuê</div>
+    <div class="price">{{item.price | money}}</div>
+    <div>{{item.form === 1 ? 'Bán' : 'Cho thuê'}}</div>
   </div>
   <div fxLayout="row">
     <div class="detail">
       <mat-icon>details</mat-icon>
-      <div>3</div>
+      <div>{{item.area}} m²</div>
     </div>
     <div class="detail">
       <mat-icon>local_hotel</mat-icon>
-      <div>3</div>
+      <div>{{item.numofbedroom}}</div>
     </div>
     <div class="detail">
       <mat-icon>hot_tub</mat-icon>
-      <div>3</div>
+      <div>{{item.numofbathroom}}</div>
     </div>
     <div class="detail">
       <mat-icon>directions</mat-icon>
-      <div>3</div>
+      <div>{{item.direction | direction}}</div>
     </div>
   </div>
   <div class="address">{{item.address.no}} {{item.address.street}},
+    <span>{{item.address.ward.name}}</span>,
     <span>{{item.address.district.name}}</span>,
     <span>{{item.address.city.name}}</span>
   </div>
   <div class="sub-detail-container">
   </div>
-  <a routerLink="/detail-real-estate/{{item.id}}">
+  <a [routerLink]="['/detail-real-estate', {id: item.id}]">
     <mat-card-title class="title">{{item.title}}</mat-card-title>
   </a>
 </mat-card>

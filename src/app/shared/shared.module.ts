@@ -18,6 +18,9 @@ import { DateCreatedPipe } from './pipes/date-created.pipe';
 import { ListCardComponent } from './list-card/list-card.component';
 import { PriceFilterPipe } from './pipes/price-filter.pipe';
 import { AreaFilterPipe } from './pipes/area-filter.pipe';
+import { MoneyPipe } from './pipes/money.pipe';
+import { DirectionPipe } from './pipes/direction.pipe';
+import { TypePipe } from './pipes/type.pipe';
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -32,7 +35,10 @@ import { AreaFilterPipe } from './pipes/area-filter.pipe';
     DateCreatedPipe,
     ListCardComponent,
     PriceFilterPipe,
-    AreaFilterPipe
+    AreaFilterPipe,
+    MoneyPipe,
+    DirectionPipe,
+    TypePipe
   ],
   imports: [
     CommonModule,
@@ -58,7 +64,12 @@ import { AreaFilterPipe } from './pipes/area-filter.pipe';
     NavComponent,
     NewsCardComponent,
     MainFilterComponent,
-    ListCardComponent
+    ListCardComponent,
+    PriceFilterPipe,
+    AreaFilterPipe,
+    MoneyPipe,
+    DirectionPipe,
+    TypePipe
   ]
 })
 export class SharedModule { }

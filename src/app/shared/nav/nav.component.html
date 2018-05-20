@@ -35,18 +35,23 @@
         <a class="nav-link" #menuTriggerNews1="matMenuTrigger" (mouseenter)="menuTriggerNews1.openMenu()" [matMenuTriggerFor]="about">Về chúng tôi</a>
         <mat-menu #about="matMenu">
           <span (mouseleave)="menuTriggerNews1.closeMenu()">
-            <button mat-menu-item (click)="goAboutPage()">Giới thiệu</button>
-            <button mat-menu-item (click)="goContactPage()">Liên lạc</button>
+            <button mat-menu-item [routerLink]="['/about']">Giới thiệu</button>
+            <button mat-menu-item [routerLink]="['/contact']">Liên lạc</button>
           </span>
         </mat-menu>
       </li>
     </ul>
-    <button mat-raised-button class="btn btn-post" (click)="goPostPage()">Đăng tin</button>
+    <button mat-raised-button class="btn btn-post" [routerLink]="['/post']">Đăng tin</button>
     <button mat-raised-button class="btn btn-login" *ngIf="!authService.logged" (click)="openLoginScreen()">Đăng nhập</button>
-    <button mat-raised-button class="btn btn-login" *ngIf="authService.logged" (click)="logout()">
+    <button mat-button [matMenuTriggerFor]="menu" *ngIf="authService.logged" class="btn-login">
       <mat-icon>
-        person_pin
+        account_circle
       </mat-icon>
+      {{userInfo.name}}
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Thông tin cá nhân</button>
+      <button mat-menu-item (click)="logout()">Đăng xuất</button>
+    </mat-menu>
   </div>
 </nav>
