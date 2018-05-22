@@ -18,3 +18,10 @@ mat-card {
     height: 180px;
     width: 180px;
 }
+a {
+    text-decoration-color: black;
+    > mat-card-title {
+        font-weight: 600;
+        color: black;
+    }
+}

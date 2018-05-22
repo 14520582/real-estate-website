@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'news-list/:category', component: NewsListPageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'news/:id', component: NewsPageComponent },
+  { path: 'news', component: NewsPageComponent },
   { path: 'post', component: PostPageComponent },
   { path: 'home', component: HomeComponent },
 ];

@@ -68,6 +68,7 @@ import { TypePipe } from './pipes/type.pipe';
     PriceFilterPipe,
     AreaFilterPipe,
     MoneyPipe,
+    DateCreatedPipe,
     DirectionPipe,
     TypePipe
   ]

@@ -33,4 +33,7 @@ export class NewsService {
   getNewsMostView(): Observable<INews[]> {
     return this.http.get<INews[]>(Constant.SERVER + 'news/get/mostview');
   }
+  getNewsById(id: number): Observable<INews> {
+    return this.http.get<INews>(Constant.SERVER + 'news/get/' + id);
+  }
 }

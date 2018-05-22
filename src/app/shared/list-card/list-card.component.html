@@ -7,7 +7,7 @@
       {{i + 1}}
     </div>
     <div>
-      <a routerLink="/news/{{item.id}}">{{item.title}}</a>
+      <a [routerLink]="['/news', {id: item.id}]">{{item.title}}</a>
       <div *ngIf="item.datecreated">
         {{item.datecreated | dateCreated}}
       </div>
