@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
 })
 export class TabFilterComponent implements OnInit {
   slogan = new Map([
-    [1,"Find your way home"],
-    [2,"Find your next rental"]
+    [0,"Find your way home"],
+    [1,"Find your next rental"]
   ]);
-  formSelected: number = 1
+  formSelected: number = 0
   areaSelected: string = ''
   locations = [
     'Quận 1', 

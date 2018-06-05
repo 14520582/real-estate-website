@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
     this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
-    this.realEstateService.getNewList(10).subscribe ( data => this.newList = data)
+    this.realEstateService.getNewList(4).subscribe ( data => this.newList = data)
   }
 
 }
