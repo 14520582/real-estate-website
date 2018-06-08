@@ -9,6 +9,7 @@ import { NewsListPageComponent} from './component/news-list-page/news-list-page.
 import { PostPageComponent } from './component/post-page/post-page.component';
 import { AboutComponent } from './component/about/about.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'property', component: SectionComponent },
   { path: 'news-list/:category', component: NewsListPageComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'news', component: NewsPageComponent },
   { path: 'post', component: PostPageComponent },

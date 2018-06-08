@@ -50,8 +50,8 @@
       {{userInfo.name}}
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Thông tin cá nhân</button>
-      <button mat-menu-item (click)="logout()">Đăng xuất</button>
+      <button mat-menu-item (click)="toProfile()">Thông tin cá nhân</button>
+      <button mat-menu-item (click)="logout()"><a href="http://localhost:4200">Đăng xuất</a></button>
     </mat-menu>
   </div>
 </nav>

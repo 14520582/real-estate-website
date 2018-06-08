@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailItemComponent implements OnInit {
   item : IRealEstate;
   date : string;
+  itemBased: IRealEstate[];
   realEstateData : IRealEstate[];
   constructor(
     private route: ActivatedRoute,
@@ -23,8 +24,12 @@ export class DetailItemComponent implements OnInit {
     this.date =  value.charAt(0).toUpperCase() + value.slice(1);
     this.realEstateService.getAllData().subscribe( data => this.realEstateData = data)
     this.route.params.subscribe( params => {
+      window.scroll(0, 0);
       this.realEstateService.getById(params.id).subscribe( data => {
         this.item = data;
+      })
+      this.realEstateService.getItemBased(params.id).subscribe( data => {
+        this.itemBased = data;
       })
      console.log(params.id)
     });

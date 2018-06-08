@@ -14,16 +14,20 @@
             <span>{{item.address.city.name}}</span>
           </div>
           <div class="detail1">
-              <div>Hình thức: <span>{{item.form === 1 ? 'Bán' : 'Cho thuê'}}</span></div>
+            <div>Hình thức:
+              <span>{{item.form === 1 ? 'Bán' : 'Cho thuê'}}</span>
+            </div>
           </div>
           <div class="detail1">
-              <div>Loại: <span>{{item.type | type : item.form}}</span></div>
+            <div>Loại:
+              <span>{{item.type | type : item.form}}</span>
+            </div>
           </div>
           <div class="detail">
             <mat-icon>details</mat-icon>
             <div>Diện tích: {{item.area}} m²</div>
-              <div class="h-w">Dài: {{item.height}} m</div>
-              <div class="h-w">Rộng: {{item.width}} m</div>
+            <div class="h-w">Dài: {{item.height}} m</div>
+            <div class="h-w">Rộng: {{item.width}} m</div>
           </div>
           <div class="detail">
             <mat-icon>description</mat-icon>
@@ -42,9 +46,9 @@
             <div>Hướng: {{item.direction | direction}}</div>
           </div>
           <div class="detail">
-              <mat-icon>clear_all</mat-icon>
-              <div>Tầng: {{item.numoffloor === 0 ? 'Chỉ tầng trệt' : item.numoffloor +' lầu'}}</div>
-            </div>
+            <mat-icon>clear_all</mat-icon>
+            <div>Tầng: {{item.numoffloor === 0 ? 'Chỉ tầng trệt' : item.numoffloor +' lầu'}}</div>
+          </div>
         </div>
       </div>
       <div class="owner-info" fxLayout="row" fxLayoutAlign="start center">
@@ -62,7 +66,7 @@
       <h4>VỊ TRÍ:</h4>
     </div>
     <div fxFlex="25">
-      <app-real-estate-card *ngFor="let item of realEstateData" [item]="item"></app-real-estate-card>
+      <app-real-estate-card *ngFor="let item of itemBased" [item]="item"></app-real-estate-card>
     </div>
   </div>
   <app-carousel [category]="'Khu vực gần đây'" [realEstateData]="realEstateData"></app-carousel>

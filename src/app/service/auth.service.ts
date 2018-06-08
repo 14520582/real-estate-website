@@ -15,11 +15,17 @@ export class AuthService {
   myStorage = window.localStorage;
   public userInfo: BehaviorSubject<any>;
   public error: BehaviorSubject<string>;
+  token: string;
   constructor(
     private dialog: MatDialog,
     private http: HttpClient
   ) {
     this.userInfo = new BehaviorSubject(null);
+    this.userInfo.subscribe(data => {
+      if(data)
+      this.token = data.token;
+      console.log(data)
+    })
     this.error = new BehaviorSubject('');
   }
   checkLogin() {
@@ -69,5 +75,31 @@ export class AuthService {
     this.myStorage.clear()
     this.logged = false;
     this.userInfo.next(null);
+  }
+  editProfile(user: IUser): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Token': this.token
+      })
+    };
+    return this.http.put<any>(Constant.SERVER + 'account/update', user, httpOptions)
+  }
+  register(user: IUser): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post<any>(Constant.SERVER + 'account/register', user, httpOptions)
+  }
+  changePassword(id: number, oldPassword: string, newPassword: string): Observable<any>  {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Token': this.token
+      })
+    };
+    return this.http.put<any>(Constant.SERVER + 'account/changepassword?id=' + id + '&oldpassword=' + oldPassword + '&newpassword=' + newPassword, null, httpOptions)
   }
 }

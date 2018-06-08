@@ -16,6 +16,9 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AuthService } from '../service/auth.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
       HomeComponent, 
@@ -25,11 +28,14 @@ import { AuthService } from '../service/auth.service';
       FooterComponent,
       SectionComponent,
       NewsPageComponent,
+      ProfileComponent,
+      SignUpComponent,
       NewsListPageComponent,
       PostPageComponent,
       AboutComponent,
       ContactComponent
   ],
+  entryComponents: [SignUpComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -41,7 +47,9 @@ import { AuthService } from '../service/auth.service';
     LayoutComponent,
     DetailItemComponent,
     FooterComponent,
-    PostPageComponent
+    PostPageComponent,
+    ProfileComponent,
+    SignUpComponent,
   ],
   providers: [RealEstateService, NewsService, AuthService],
 })

@@ -46,13 +46,15 @@ interface IRealEstate {
     cover: string
 }
 interface IUser {
-    id: number;
-    username: string;
-    password: string;
-    name: string;
-    address: string;
-    role: string;
-    token: string;
+    id?: number;
+    username?: string;
+    password?: string;
+    name?: string;
+    address?: string;
+    phone?: string;
+    role?: string;
+    email?: string;
+    token?: string;
 }
 interface IBook {
     id: number;

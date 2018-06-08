@@ -23,10 +23,10 @@ export class RealEstateService {
   getById(id: string): Observable<IRealEstate> {
     return this.http.get<IRealEstate>(Constant.SERVER + 'property/get/' + id);
   }
-  getUserBased(id: number): Observable<IRealEstate> {
-    return this.http.get<IRealEstate>(Constant.SERVER + 'property/get/userbased' + id);
+  getUserBased(id: number): Observable<IRealEstate[]> {
+    return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/userbased/' + id);
   }
-  getItemBased(id: number): Observable<IRealEstate> {
-    return this.http.get<IRealEstate>(Constant.SERVER + 'property/get/itembased' + id);
+  getItemBased(id: number): Observable<IRealEstate[]> {
+    return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/itembased/' + id);
   }
 }

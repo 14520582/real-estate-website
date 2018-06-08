@@ -33,7 +33,11 @@ export class NavComponent implements OnInit {
     this.loginDialog.open(LoginComponent)
 
   }
+  toProfile() {
+    this.router.navigate(['/profile']);
+  }
   logout(){
+    // this.router.navigate(['']);
     this.authService.logout()
   }
 }
