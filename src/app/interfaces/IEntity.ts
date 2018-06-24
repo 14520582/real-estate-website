@@ -35,6 +35,19 @@ interface IAlbum {
     releasedate: number;
     cover: string
 }
+// interface ICity {
+//     id?: number;
+//     name?: string;
+// }
+// interface IDistrict {
+//     id?: number;
+//     name?: string;
+//     city?: ICity;
+// }
+// interface IWard {
+//     id?: number;
+//     name?: string;
+// }
 interface IRealEstate {
     id: number;
     title: string;

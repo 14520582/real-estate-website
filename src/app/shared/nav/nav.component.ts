@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 import { MatDialog } from '@angular/material';
 import { LoginComponent } from '../../component/login/login.component';
+import { CallDialogComponent } from '../../component/call-dialog/call-dialog.component';
 
 @Component({
   selector: 'app-nav',
@@ -14,7 +15,7 @@ export class NavComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private loginDialog: MatDialog
+    private matDialog: MatDialog
   ) { 
     this.authService.userInfo.subscribe(data => {
       this.userInfo = data;
@@ -30,7 +31,11 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/news-list/', category]);
   }
   openLoginScreen(){
-    this.loginDialog.open(LoginComponent)
+    this.matDialog.open(LoginComponent)
+
+  }
+  openCallDialog(){
+    this.matDialog.open(CallDialogComponent).disableClose = true;
 
   }
   toProfile() {

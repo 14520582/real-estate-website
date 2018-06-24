@@ -12,10 +12,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/property', {form: 1}]">Mua</a>
+        <a class="nav-link" [routerLink]="['/property', {content: 'form:0'}]">Mua</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/property', {form: 2}]">Thuê</a>
+        <a class="nav-link" [routerLink]="['/property', {content: 'form:1'}]">Thuê</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" #menuTriggerNews="matMenuTrigger" (mouseenter)="menuTriggerNews.openMenu()" [matMenuTriggerFor]="news">Tin tức</a>
@@ -41,6 +41,9 @@
         </mat-menu>
       </li>
     </ul>
+    <button mat-mini-fab matTooltip="Gọi tư vấn" (click)="openCallDialog()">
+      <mat-icon>headset_mic</mat-icon>
+    </button>
     <button mat-raised-button class="btn btn-post" [routerLink]="['/post']">Đăng tin</button>
     <button mat-raised-button class="btn btn-login" *ngIf="!authService.logged" (click)="openLoginScreen()">Đăng nhập</button>
     <button mat-button [matMenuTriggerFor]="menu" *ngIf="authService.logged" class="btn-login">

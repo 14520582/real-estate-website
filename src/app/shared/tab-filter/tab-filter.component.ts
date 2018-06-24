@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { RealEstateService } from '../../service/real-estate.service';
 
 @Component({
   selector: 'app-tab-filter',
@@ -12,23 +13,16 @@ export class TabFilterComponent implements OnInit {
     [1,"Find your next rental"]
   ]);
   formSelected: number = 0
-  areaSelected: string = ''
-  locations = [
-    'Quận 1', 
-    'Quận 2', 
-    'Quận 3',
-    'Quận 4', 
-    'Quận 5',
-    'Bình Thạnh',
-    'Hóc Môn',
-    'Củ Chỉ',
-    'Bình Tân',
-    'Gò Vấp',
-    'Thủ Đức'
-  ];
+  areaSelected: number;
+  districts: any[];
   constructor(
-    private router: Router
-  ) { }
+    private router: Router,
+    private realEstateService: RealEstateService
+  ) { 
+      this.realEstateService.getDistrictByCity(1).subscribe(data=>{
+        this.districts = data
+      })
+  }
 
   ngOnInit() {
   }
@@ -45,7 +39,7 @@ export class TabFilterComponent implements OnInit {
   }
 
   toSection(){
-    if(this.areaSelected && this.areaSelected != '')
-      this.router.navigate(['/property/', {form: this.formSelected, district: this.areaSelected}]);
+    if(this.areaSelected)
+      this.router.navigate(['/property/', {content: 'form:' + this.formSelected + ',' + 'district:' + this.areaSelected}]);
   }
 }

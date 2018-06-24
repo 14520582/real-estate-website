@@ -2,6 +2,7 @@
     <div class="page-header section-dark" style="background-image: url('assets/img/garden.jpg')">
         <app-tab-filter></app-tab-filter>
     </div>
+    <app-carousel *ngIf="authService.logged" [category]="'Có thể bạn quan tâm'" [realEstateData]="userBasedItem"></app-carousel>
     <app-carousel [category]="'Mới'" [realEstateData]="newList"></app-carousel>
     <app-carousel [category]="'Nội thành'" [realEstateData]="realEstateData"></app-carousel>
     <app-carousel [category]="'Ngoại ô'" [realEstateData]="realEstateData"></app-carousel>

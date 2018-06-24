@@ -2,9 +2,22 @@
   <div>
     <app-main-filter></app-main-filter>
   </div>
+  <mat-paginator [length]="totalOfItems" [pageSize]="20" (page)="onPaginateChange($event)">
+  </mat-paginator>
   <div
+    *ngIf="totalOfItems > 0;else noResult"
     fxLayout="row wrap" 
     fxLayout.xs="column"> 
       <app-real-estate-card *ngFor="let item of realEstateData" fxFlex="25%" [item] = "item"></app-real-estate-card>
   </div>
+  <ng-template #noResult>
+    <div class="empty" fxLayout="column" fxLayoutAlign="center center">
+      <h2>Result not found</h2>
+      <a [routerLink]="['/home']">Back to Home</a>
+    </div>
+  </ng-template>
+  <mat-paginator [length]="totalOfItems" [pageSize]="20" (page)="onPaginateChange($event)">
+  </mat-paginator>
+  <app-carousel *ngIf="authService.logged" [category]="'Có thể bạn quan tâm'" [realEstateData]="userBasedItem"></app-carousel>
+  <app-carousel [category]="'Mới cập nhật'" [realEstateData]="similarZone"></app-carousel>
 </div>

@@ -12,8 +12,9 @@ export class TypePipe implements PipeTransform {
       case 1:
         if(args === 1)
           return 'Đất nền'
-        else
+        if (args === 0)
           return 'Mặt bằng'
+        return 'Đất nền/Mặt bằng'
       case 2:
         return 'Chung cư'
       default:

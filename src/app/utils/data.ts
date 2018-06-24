@@ -423,10 +423,10 @@ export class Data {
         'Thủ Đức'
       ];
     
-    public static cities: string[] = [
-        'Hồ Chí Minh', 
-        'Hà Nội',
-        'Đà Nẵng'
+    public static cities: any[] = [
+        {id: 1, name: 'Hồ Chí Minh'}, 
+        {id: 2, name: 'Hà Nội'},
+        {id: 3,name: 'Đà Nẵng'}
     ];
     
     public static wards: string[] = [
@@ -437,24 +437,28 @@ export class Data {
         'Phường 6',
     ];
     
-    public static types: string[] = [
-        'Nhà riêng',
-        'Đất nền',
-        'Chung cư'
+    public static types: number[] = [
+        0,
+        1,
+        2
+      ];
+
+    public static directions: any[] = [
+        {value: 1, name: 'Đông'},
+        {value: 2, name: 'Tây'},
+        {value: 3, name: 'Nam'},
+        {value: 4, name: 'Bắc'},
+        {value: 13, name: 'Đông Nam'},
+        {value: 14, name: 'Đông Bắc'},
+        {value: 23, name: 'Tây Nam'},
+        {value: 24, name: 'Tây Bắc'},
       ];
     
-    public static directions: string[] = [
-        'Đông',
-        'Tây',
-        'Nam',
-        'Bắc'
-      ];
-    
-    public static floors: string[] = [
-        'Chỉ tầng trệt',
-        '1',
-        '2',
-        '3'
+    public static floors: any[] = [
+        {value: 0, label: 'Chỉ tầng trệt'},
+        {value: 1, label: '1'},
+        {value: 2, label: '2'},
+        {value: 3, label: '3'},
     ]
     
     public static prices: any[] = [

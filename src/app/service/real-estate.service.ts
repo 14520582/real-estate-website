@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
  
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
-import { catchError, map, tap } from 'rxjs/operators'
 
 import {IAlbum, IRealEstate} from '../interfaces/IEntity'
 import {Constant} from '../utils/constant'
 @Injectable()
 export class RealEstateService {
-  constructor(private http: HttpClient) {
+  userId: number;
+  constructor(
+    private http: HttpClient,
+  ) {
   }
   getAllData(): Observable<IRealEstate[]> {
     return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/new?limit='+Constant.CAROUSEL_SIZE);
@@ -19,6 +20,16 @@ export class RealEstateService {
   }
   getByDistrictAndForm(district: string, form: number): Observable<IRealEstate[]> {
     return this.http.get<IRealEstate[]>(Constant.SERVER + 'property/get/' + district + '/' + form);
+  }
+  filter(content: string, page: number): Observable<any> {
+    console.log(Constant.SERVER + 'property/get/filter?page=' + page + '&pagesize=' + Constant.PAGE_SIZE_FILTER + '&content=' + content)
+    return this.http.get<any>(Constant.SERVER + 'property/get/filter?page=' + page + '&pagesize=' + Constant.PAGE_SIZE_FILTER + '&content=' + content);
+  }
+  getDistrictByCity(city: number): Observable<any[]>  {
+    return this.http.get<any[]>(Constant.SERVER + 'district/get/' + city);
+  }
+  getWardByDistrict(district: number): Observable<any[]>  {
+    return this.http.get<any[]>(Constant.SERVER + 'district/get/ward/' + district);
   }
   getById(id: string): Observable<IRealEstate> {
     return this.http.get<IRealEstate>(Constant.SERVER + 'property/get/' + id);

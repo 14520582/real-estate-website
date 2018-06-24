@@ -4,17 +4,17 @@
       <mat-icon>location_city</mat-icon>
       <mat-form-field>
         <mat-select formControlName="city">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <div class="selection-bar has-border">
       <mat-icon>location_on</mat-icon>
       <mat-form-field>
-        <mat-select  formControlName="district">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let district of districts" [value]="district">{{district}}</mat-option>
+        <mat-select  formControlName="district" (selectionChange)="changeDistrict()">
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let district of districts" [value]="district.id">{{district.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -22,8 +22,8 @@
       <mat-icon>all_out</mat-icon>
       <mat-form-field>
         <mat-select formControlName="ward">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let ward of wards" [value]="ward">{{ward}}</mat-option>
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let ward of wards" [value]="ward.id">{{ward.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -31,8 +31,8 @@
       <mat-icon>home</mat-icon>
       <mat-form-field>
         <mat-select formControlName="type">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let type of types" [value]="type">{{type | type}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -46,7 +46,7 @@
       <mat-slider formControlName="area" step="20" max="140" min="0" thumbLabel></mat-slider>
       <div>{{filterForm.controls['area'].value | areaFilter}}</div>
     </div>
-    <button mat-raised-button color="primary">Tìm kiếm</button>
+    <button mat-raised-button color="primary" (click)="filter()">Tìm kiếm</button>
     <button mat-raised-button color="primary" (click)="expand()">Mở rộng</button>
   </div>
   <div *ngIf="isExpanded" fxLayout="row" fxLayoutAlign="start center">
@@ -54,8 +54,8 @@
       <mat-icon>clear_all</mat-icon>
       <mat-form-field>
         <mat-select formControlName="floor">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let floor of floors" [value]="floor">{{floor}}</mat-option>
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let floor of floors" [value]="floor.value">{{floor.label}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -63,29 +63,37 @@
       <mat-icon>directions</mat-icon>
       <mat-form-field>
         <mat-select formControlName="direction">
-          <mat-option [value]="'all'">Tất cả</mat-option>
-          <mat-option *ngFor="let direction of directions" [value]="direction">{{direction}}</mat-option>
+          <mat-option [value]="-1">Tất cả</mat-option>
+          <mat-option *ngFor="let direction of directions" [value]="direction.value">{{direction.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <div class="choose-number-panel expand">
+      <div>Hình thức:   </div>
+      <mat-radio-group class="radio-group" formControlName="form">
+        <mat-radio-button value="-1" checked>Tất cả</mat-radio-button>
+        <mat-radio-button value="0">Bán</mat-radio-button>
+        <mat-radio-button value="1">Cho thuê</mat-radio-button>
+      </mat-radio-group> 
+    </div>
+    <div class="choose-number-panel expand">
       <div>Phòng ngủ:   </div>
       <mat-radio-group class="radio-group" formControlName="numberOfBedRoom">
+        <mat-radio-button value="-1" checked>Tất cả</mat-radio-button>
         <mat-radio-button value="1">1</mat-radio-button>
         <mat-radio-button value="2">2</mat-radio-button>
         <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5+</mat-radio-button>
+        <mat-radio-button value="4">4+</mat-radio-button>
       </mat-radio-group> 
     </div>
     <div class="choose-number-panel expand">
       <div>Phòng tắm:   </div>
       <mat-radio-group class="radio-group" formControlName="numberOfBathRoom">
+        <mat-radio-button value="-1" checked>Tất cả</mat-radio-button>
         <mat-radio-button value="1">1</mat-radio-button>
         <mat-radio-button value="2">2</mat-radio-button>
         <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5+</mat-radio-button>
+        <mat-radio-button value="4">4+</mat-radio-button>
       </mat-radio-group> 
     </div>
   </div>

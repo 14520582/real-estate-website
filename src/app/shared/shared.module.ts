@@ -21,6 +21,8 @@ import { AreaFilterPipe } from './pipes/area-filter.pipe';
 import { MoneyPipe } from './pipes/money.pipe';
 import { DirectionPipe } from './pipes/direction.pipe';
 import { TypePipe } from './pipes/type.pipe';
+import { AppJssipModule } from '../service/app-jssip/app-jssip.module';
+
 @NgModule({
   declarations: [
     SideNavComponent,
@@ -47,6 +49,7 @@ import { TypePipe } from './pipes/type.pipe';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
+    AppJssipModule,
     CdkTableModule
   ],
   exports:[
@@ -68,9 +71,11 @@ import { TypePipe } from './pipes/type.pipe';
     PriceFilterPipe,
     AreaFilterPipe,
     MoneyPipe,
+    AppJssipModule,
     DateCreatedPipe,
     DirectionPipe,
     TypePipe
   ]
+  
 })
 export class SharedModule { }

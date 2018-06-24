@@ -18,6 +18,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AuthService } from '../service/auth.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CallDialogComponent } from './call-dialog/call-dialog.component';
+import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,11 @@ import { ProfileComponent } from './profile/profile.component';
       NewsListPageComponent,
       PostPageComponent,
       AboutComponent,
-      ContactComponent
+      ContactComponent,
+      ConfigComponent,
+      CallDialogComponent
   ],
-  entryComponents: [SignUpComponent],
+  entryComponents: [SignUpComponent, CallDialogComponent, ConfigComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -47,7 +51,9 @@ import { ProfileComponent } from './profile/profile.component';
     LayoutComponent,
     DetailItemComponent,
     FooterComponent,
+    CallDialogComponent,
     PostPageComponent,
+    ConfigComponent,
     ProfileComponent,
     SignUpComponent,
   ],
